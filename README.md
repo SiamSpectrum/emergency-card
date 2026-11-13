@@ -4,7 +4,7 @@ A printable wallet card that carries the medical details a stranger would need i
 
 Fill in the form, print the card, put it in your wallet. Scan the QR code and the details are there as plain text — no app of ours, no account, no internet needed at scan time.
 
-Live version (once GitHub Pages is enabled): https://siamspectrum.github.io/emergency-card/
+Live version: https://siamspectrum.github.io/emergency-card/
 
 ## What it is
 
@@ -19,12 +19,51 @@ Live version (once GitHub Pages is enabled): https://siamspectrum.github.io/emer
 
 Nothing you type is uploaded or saved anywhere. There is no server, no database, and no account. The page is a single HTML file. Your details stay in your browser tab and in the QR code you print. The page loads its fonts from Google Fonts; your details are not in that request.
 
-## Use it
+## How to use it
 
-1. Open the link above on any device — PC, Android, iPhone, anything with a browser.
-2. Fill in the form. Leave blank anything that does not apply; it will not show on the card.
-3. Pick a language and a design.
-4. Print at 100% / actual size, cut out the card, and keep it in your wallet. Or download the PNG.
+The screenshots below use fictional sample details (Alex Rahman, allergy to penicillin and peanuts). They are not a real person's records.
+
+### 1. Open the page
+
+Open the live site, or download `index.html` and open it in any browser — PC, Android, iPhone. There is nothing to install and no sign-up.
+
+### 2. Fill in the form
+
+![Fill in the form](screenshots/01-open-and-fill.png)
+
+Type your name, date of birth, blood group, allergies, medicines taken regularly, conditions a helper should know, two emergency contacts, and a short note. Keep it short and current. Leave blank anything that does not apply — it will not show on the card. If you have no known allergies, write "None known"; that helps a helper too.
+
+### 3. Pick a language and a design
+
+![Pick a language and a design](screenshots/02-language-and-design.png)
+
+Search the 57 languages and pick the one a helper where you are is most likely to read — the printed labels and the text inside the QR change to it. Then pick one of the 11 card designs. The design changes the colours and header only; the information and the QR stay exactly the same.
+
+### 4. Check the card
+
+![The finished card, front and back](screenshots/03-card-preview.png)
+
+The preview shows the card front and back at wallet size, 85.6 × 54 mm. Check the name, blood group and allergies are right, and that nothing is cut off. The back carries the second QR, the note, and the first person to call.
+
+On a phone the same preview stacks into one column:
+
+![The card on a phone](screenshots/06-mobile-card.png)
+
+### 5. Check exactly what a scan shows
+
+![What any scanner shows](screenshots/04-qr-text.png)
+
+Click "Show exactly what a scan displays". This is the whole QR: plain text, not a web address. It starts with the name in capitals and the allergies, then blood group, date of birth, medicines, conditions, the two contacts, and the note. Any modern phone camera or scanner app reads it straight from the printed squares — no signal, no page to load, even on a phone that has never opened this page.
+
+### 6. Download or print it
+
+![Download or print](screenshots/05-print-or-download.png)
+
+Click "Download card image (PNG)" for an image of the card, or print from your browser or device: choose the Print option and set 100% / Actual size, not "Fit to page" — only the two cards print, at true wallet size. Print double-sided, or print the back as a second card and stick the two together.
+
+### 7. Test it, then carry it
+
+Before you carry the card, scan the printed card once with the phone in flight mode. If it reads with no signal, it will read in an emergency. Then keep it in your wallet, bag or phone case.
 
 That is all. No install, no sign-up.
 
