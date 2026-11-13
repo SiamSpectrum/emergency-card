@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Emergency Card — for anyone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>/* QR generator (qrcode-generator 1.4.4, Kazuhiko Arase, MIT) — inlined so the QR is made fully offline, in this page. */
+var qrcode=function(){function i(t,r){function a(t,r){g=function(t){for(var r=new Array(t),e=0;e<t;e+=1){r[e]=new Array(t);for(var n=0;n<t;n+=1)r[e][n]=null}return r}(l=4*u+17),e(0,0),e(l-7,0),e(0,l-7),i(),o(),v(t,r),7<=u&&h(t),null==n&&(n=w(u,f,c)),d(n,r)}var u=t,f=y[r],g=null,l=0,n=null,c=[],s={},e=function(t,r){for(var e=-1;e<=7;e+=1)if(!(t+e<=-1||l<=t+e))for(var n=-1;n<=7;n+=1)r+n<=-1||l<=r+n||(g[t+e][r+n]=0<=e&&e<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==e||6==e)||2<=e&&e<=4&&2<=n&&n<=4)},o=function(){for(var t=8;t<l-8;t+=1)null==g[t][6]&&(g[t][6]=t%2==0);for(var r=8;r<l-8;r+=1)null==g[6][r]&&(g[6][r]=r%2==0)},i=function(){for(var t=B.getPatternPosition(u),r=0;r<t.length;r+=1)for(var e=0;e<t.length;e+=1){var n=t[r],o=t[e];if(null==g[n][o])for(var i=-2;i<=2;i+=1)for(var a=-2;a<=2;a+=1)g[n+i][o+a]=-2==i||2==i||-2==a||2==a||0==i&&0==a}},h=function(t){for(var r=B.getBCHTypeNumber(u),e=0;e<18;e+=1){var n=!t&&1==(r>>e&1);g[Math.floor(e/3)][e%3+l-8-3]=n}for(e=0;e<18;e+=1){n=!t&&1==(r>>e&1);g[e%3+l-8-3][Math.floor(e/3)]=n}},v=function(t,r){for(var e=f<<3|r,n=B.getBCHTypeInfo(e),o=0;o<15;o+=1){var i=!t&&1==(n>>o&1);o<6?g[o][8]=i:o<8?g[o+1][8]=i:g[l-15+o][8]=i}for(o=0;o<15;o+=1){i=!t&&1==(n>>o&1);o<8?g[8][l-o-1]=i:o<9?g[8][15-o-1+1]=i:g[8][15-o-1]=i}g[l-8][8]=!t},d=function(t,r){for(var e=-1,n=l-1,o=7,i=0,a=B.getMaskFunction(r),u=l-1;0<u;u-=2)for(6==u&&(u-=1);;){for(var f=0;f<2;f+=1)if(null==g[n][u-f]){var c=!1;i<t.length&&(c=1==(t[i]>>>o&1)),a(n,u-f)&&(c=!c),g[n][u-f]=c,-1==(o-=1)&&(i+=1,o=7)}if((n+=e)<0||l<=n){n-=e,e=-e;break}}},w=function(t,r,e){for(var n=b.getRSBlocks(t,r),o=M(),i=0;i<e.length;i+=1){var a=e[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var u=0;for(i=0;i<n.length;i+=1)u+=n[i].dataCount;if(o.getLengthInBits()>8*u)throw"code length overflow. ("+o.getLengthInBits()+">"+8*u+")";for(o.getLengthInBits()+4<=8*u&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*u||(o.put(236,8),o.getLengthInBits()>=8*u));)o.put(17,8);return function(t,r){for(var e=0,n=0,o=0,i=new Array(r.length),a=new Array(r.length),u=0;u<r.length;u+=1){var f=r[u].dataCount,c=r[u].totalCount-f;n=Math.max(n,f),o=Math.max(o,c),i[u]=new Array(f);for(var g=0;g<i[u].length;g+=1)i[u][g]=255&t.getBuffer()[g+e];e+=f;var l=B.getErrorCorrectPolynomial(c),h=C(i[u],l.getLength()-1).mod(l);a[u]=new Array(l.getLength()-1);for(g=0;g<a[u].length;g+=1){var s=g+h.getLength()-a[u].length;a[u][g]=0<=s?h.getAt(s):0}}var v=0;for(g=0;g<r.length;g+=1)v+=r[g].totalCount;var d=new Array(v),w=0;for(g=0;g<n;g+=1)for(u=0;u<r.length;u+=1)g<i[u].length&&(d[w]=i[u][g],w+=1);for(g=0;g<o;g+=1)for(u=0;u<r.length;u+=1)g<a[u].length&&(d[w]=a[u][g],w+=1);return d}(o,n)};s.addData=function(t,r){var e=null;switch(r=r||"Byte"){case"Numeric":e=x(t);break;case"Alphanumeric":e=m(t);break;case"Byte":e=L(t);break;case"Kanji":e=D(t);break;default:throw"mode:"+r}c.push(e),n=null},s.isDark=function(t,r){if(t<0||l<=t||r<0||l<=r)throw t+","+r;return g[t][r]},s.getModuleCount=function(){return l},s.make=function(){if(u<1){for(var t=1;t<40;t++){for(var r=b.getRSBlocks(t,f),e=M(),n=0;n<c.length;n++){var o=c[n];e.put(o.getMode(),4),e.put(o.getLength(),B.getLengthInBits(o.getMode(),t)),o.write(e)}var i=0;for(n=0;n<r.length;n++)i+=r[n].dataCount;if(e.getLengthInBits()<=8*i)break}u=t}a(!1,function(){for(var t=0,r=0,e=0;e<8;e+=1){a(!0,e);var n=B.getLostPoint(s);(0==e||n<t)&&(t=n,r=e)}return r}())},s.createTableTag=function(t,r){t=t||2;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+(r=void 0===r?4*t:r)+"px;",e+='">',e+="<tbody>";for(var n=0;n<s.getModuleCount();n+=1){e+="<tr>";for(var o=0;o<s.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+t+"px;",e+=" height: "+t+"px;",e+=" background-color: ",e+=s.isDark(n,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>"},s.createSvgTag=function(t,r,e,n){var o={};"object"==typeof t&&(t=(o=t).cellSize,r=o.margin,e=o.alt,n=o.title),t=t||2,r=void 0===r?4*t:r,(e="string"==typeof e?{text:e}:e||{}).text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,u,f,c=s.getModuleCount()*t+2*r,g="";for(f="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",g+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',g+=o.scalable?"":' width="'+c+'px" height="'+c+'px"',g+=' viewBox="0 0 '+c+" "+c+'" ',g+=' preserveAspectRatio="xMinYMin meet"',g+=n.text||e.text?' role="img" aria-labelledby="'+p([n.id,e.id].join(" ").trim())+'"':"",g+=">",g+=n.text?'<title id="'+p(n.id)+'">'+p(n.text)+"</title>":"",g+=e.text?'<description id="'+p(e.id)+'">'+p(e.text)+"</description>":"",g+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',g+='<path d="',a=0;a<s.getModuleCount();a+=1)for(u=a*t+r,i=0;i<s.getModuleCount();i+=1)s.isDark(a,i)&&(g+="M"+(i*t+r)+","+u+f);return g+='" stroke="transparent" fill="black"/>',g+="</svg>"},s.createDataURL=function(o,t){o=o||2,t=void 0===t?4*o:t;var r=s.getModuleCount()*o+2*t,i=t,a=r-t;return I(r,r,function(t,r){if(i<=t&&t<a&&i<=r&&r<a){var e=Math.floor((t-i)/o),n=Math.floor((r-i)/o);return s.isDark(n,e)?0:1}return 1})},s.createImgTag=function(t,r,e){t=t||2,r=void 0===r?4*t:r;var n=s.getModuleCount()*t+2*r,o="";return o+="<img",o+=' src="',o+=s.createDataURL(t,r),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',e&&(o+=' alt="',o+=p(e),o+='"'),o+="/>"};var p=function(t){for(var r="",e=0;e<t.length;e+=1){var n=t.charAt(e);switch(n){case"<":r+="&lt;";break;case">":r+="&gt;";break;case"&":r+="&amp;";break;case'"':r+="&quot;";break;default:r+=n}}return r};return s.createASCII=function(t,r){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var r,e,n,o,i,a=1*s.getModuleCount()+2*t,u=t,f=a-t,c={"██":"█","█ ":"▀"," █":"▄","  ":" "},g={"██":"▀","█ ":"▀"," █":" ","  ":" "},l="";for(r=0;r<a;r+=2){for(n=Math.floor((r-u)/1),o=Math.floor((r+1-u)/1),e=0;e<a;e+=1)i="█",u<=e&&e<f&&u<=r&&r<f&&s.isDark(n,Math.floor((e-u)/1))&&(i=" "),u<=e&&e<f&&u<=r+1&&r+1<f&&s.isDark(o,Math.floor((e-u)/1))?i+=" ":i+="█",l+=t<1&&f<=r+1?g[i]:c[i];l+="\n"}return a%2&&0<t?l.substring(0,l.length-a-1)+Array(1+a).join("▀"):l.substring(0,l.length-1)}(r);t-=1,r=void 0===r?2*t:r;var e,n,o,i,a=s.getModuleCount()*t+2*r,u=r,f=a-r,c=Array(t+1).join("██"),g=Array(t+1).join("  "),l="",h="";for(e=0;e<a;e+=1){for(o=Math.floor((e-u)/t),h="",n=0;n<a;n+=1)i=1,u<=n&&n<f&&u<=e&&e<f&&s.isDark(o,Math.floor((n-u)/t))&&(i=0),h+=i?c:g;for(o=0;o<t;o+=1)l+=h+"\n"}return l.substring(0,l.length-1)},s.renderTo2dContext=function(t,r){r=r||2;for(var e=s.getModuleCount(),n=0;n<e;n++)for(var o=0;o<e;o++)t.fillStyle=s.isDark(n,o)?"black":"white",t.fillRect(n*r,o*r,r,r)},s}i.stringToBytes=(i.stringToBytesFuncs={default:function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);r.push(255&n)}return r}}).default,i.createStringToBytes=function(u,f){var i=function(){function t(){var t=r.read();if(-1==t)throw"eof";return t}for(var r=S(u),e=0,n={};;){var o=r.read();if(-1==o)break;var i=t(),a=t()<<8|t();n[String.fromCharCode(o<<8|i)]=a,e+=1}if(e!=f)throw e+" != "+f;return n}(),a="?".charCodeAt(0);return function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);if(n<128)r.push(n);else{var o=i[t.charAt(e)];"number"==typeof o?(255&o)==o?r.push(o):(r.push(o>>>8),r.push(255&o)):r.push(a)}}return r}};var r,t,a=1,u=2,o=4,f=8,y={L:1,M:0,Q:3,H:2},e=0,n=1,c=2,g=3,l=4,h=5,s=6,v=7,B=(r=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],(t={}).getBCHTypeInfo=function(t){for(var r=t<<10;0<=d(r)-d(1335);)r^=1335<<d(r)-d(1335);return 21522^(t<<10|r)},t.getBCHTypeNumber=function(t){for(var r=t<<12;0<=d(r)-d(7973);)r^=7973<<d(r)-d(7973);return t<<12|r},t.getPatternPosition=function(t){return r[t-1]},t.getMaskFunction=function(t){switch(t){case e:return function(t,r){return(t+r)%2==0};case n:return function(t,r){return t%2==0};case c:return function(t,r){return r%3==0};case g:return function(t,r){return(t+r)%3==0};case l:return function(t,r){return(Math.floor(t/2)+Math.floor(r/3))%2==0};case h:return function(t,r){return t*r%2+t*r%3==0};case s:return function(t,r){return(t*r%2+t*r%3)%2==0};case v:return function(t,r){return(t*r%3+(t+r)%2)%2==0};default:throw"bad maskPattern:"+t}},t.getErrorCorrectPolynomial=function(t){for(var r=C([1],0),e=0;e<t;e+=1)r=r.multiply(C([1,w.gexp(e)],0));return r},t.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case a:return 10;case u:return 9;case o:case f:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case a:return 12;case u:return 11;case o:return 16;case f:return 10;default:throw"mode:"+t}else{if(!(r<41))throw"type:"+r;switch(t){case a:return 14;case u:return 13;case o:return 16;case f:return 12;default:throw"mode:"+t}}},t.getLostPoint=function(t){for(var r=t.getModuleCount(),e=0,n=0;n<r;n+=1)for(var o=0;o<r;o+=1){for(var i=0,a=t.isDark(n,o),u=-1;u<=1;u+=1)if(!(n+u<0||r<=n+u))for(var f=-1;f<=1;f+=1)o+f<0||r<=o+f||0==u&&0==f||a==t.isDark(n+u,o+f)&&(i+=1);5<i&&(e+=3+i-5)}for(n=0;n<r-1;n+=1)for(o=0;o<r-1;o+=1){var c=0;t.isDark(n,o)&&(c+=1),t.isDark(n+1,o)&&(c+=1),t.isDark(n,o+1)&&(c+=1),t.isDark(n+1,o+1)&&(c+=1),0!=c&&4!=c||(e+=3)}for(n=0;n<r;n+=1)for(o=0;o<r-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(e+=40);for(o=0;o<r;o+=1)for(n=0;n<r-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(e+=40);var g=0;for(o=0;o<r;o+=1)for(n=0;n<r;n+=1)t.isDark(n,o)&&(g+=1);return e+=Math.abs(100*g/r/r-50)/5*10},t);function d(t){for(var r=0;0!=t;)r+=1,t>>>=1;return r}var w=function(){for(var r=new Array(256),e=new Array(256),t=0;t<8;t+=1)r[t]=1<<t;for(t=8;t<256;t+=1)r[t]=r[t-4]^r[t-5]^r[t-6]^r[t-8];for(t=0;t<255;t+=1)e[r[t]]=t;var n={glog:function(t){if(t<1)throw"glog("+t+")";return e[t]},gexp:function(t){for(;t<0;)t+=255;for(;256<=t;)t-=255;return r[t]}};return n}();function C(n,o){if(void 0===n.length)throw n.length+"/"+o;var r=function(){for(var t=0;t<n.length&&0==n[t];)t+=1;for(var r=new Array(n.length-t+o),e=0;e<n.length-t;e+=1)r[e]=n[e+t];return r}(),i={getAt:function(t){return r[t]},getLength:function(){return r.length},multiply:function(t){for(var r=new Array(i.getLength()+t.getLength()-1),e=0;e<i.getLength();e+=1)for(var n=0;n<t.getLength();n+=1)r[e+n]^=w.gexp(w.glog(i.getAt(e))+w.glog(t.getAt(n)));return C(r,0)},mod:function(t){if(i.getLength()-t.getLength()<0)return i;for(var r=w.glog(i.getAt(0))-w.glog(t.getAt(0)),e=new Array(i.getLength()),n=0;n<i.getLength();n+=1)e[n]=i.getAt(n);for(n=0;n<t.getLength();n+=1)e[n]^=w.gexp(w.glog(t.getAt(n))+r);return C(e,0).mod(t)}};return i}function p(){var e=[],o={writeByte:function(t){e.push(255&t)},writeShort:function(t){o.writeByte(t),o.writeByte(t>>>8)},writeBytes:function(t,r,e){r=r||0,e=e||t.length;for(var n=0;n<e;n+=1)o.writeByte(t[n+r])},writeString:function(t){for(var r=0;r<t.length;r+=1)o.writeByte(t.charCodeAt(r))},toByteArray:function(){return e},toString:function(){var t="";t+="[";for(var r=0;r<e.length;r+=1)0<r&&(t+=","),t+=e[r];return t+="]"}};return o}var k,A,b=(k=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],(A={}).getRSBlocks=function(t,r){var e=function(t,r){switch(r){case y.L:return k[4*(t-1)+0];case y.M:return k[4*(t-1)+1];case y.Q:return k[4*(t-1)+2];case y.H:return k[4*(t-1)+3];default:return}}(t,r);if(void 0===e)throw"bad rs block @ typeNumber:"+t+"/errorCorrectionLevel:"+r;for(var n,o,i=e.length/3,a=[],u=0;u<i;u+=1)for(var f=e[3*u+0],c=e[3*u+1],g=e[3*u+2],l=0;l<f;l+=1)a.push((n=g,o=void 0,(o={}).totalCount=c,o.dataCount=n,o));return a},A),M=function(){var e=[],n=0,o={getBuffer:function(){return e},getAt:function(t){var r=Math.floor(t/8);return 1==(e[r]>>>7-t%8&1)},put:function(t,r){for(var e=0;e<r;e+=1)o.putBit(1==(t>>>r-e-1&1))},getLengthInBits:function(){return n},putBit:function(t){var r=Math.floor(n/8);e.length<=r&&e.push(0),t&&(e[r]|=128>>>n%8),n+=1}};return o},x=function(t){var r=a,n=t,e={getMode:function(){return r},getLength:function(t){return n.length},write:function(t){for(var r=n,e=0;e+2<r.length;)t.put(o(r.substring(e,e+3)),10),e+=3;e<r.length&&(r.length-e==1?t.put(o(r.substring(e,e+1)),4):r.length-e==2&&t.put(o(r.substring(e,e+2)),7))}},o=function(t){for(var r=0,e=0;e<t.length;e+=1)r=10*r+i(t.charAt(e));return r},i=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return e},m=function(t){var r=u,n=t,e={getMode:function(){return r},getLength:function(t){return n.length},write:function(t){for(var r=n,e=0;e+1<r.length;)t.put(45*o(r.charAt(e))+o(r.charAt(e+1)),11),e+=2;e<r.length&&t.put(o(r.charAt(e)),6)}},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return e},L=function(t){var r=o,e=i.stringToBytes(t),n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=0;r<e.length;r+=1)t.put(e[r],8)}};return n},D=function(t){var r=f,e=i.stringToBytesFuncs.SJIS;if(!e)throw"sjis not supported.";!function(){var t=e("友");if(2!=t.length||38726!=(t[0]<<8|t[1]))throw"sjis not supported."}();var o=e(t),n={getMode:function(){return r},getLength:function(t){return~~(o.length/2)},write:function(t){for(var r=o,e=0;e+1<r.length;){var n=(255&r[e])<<8|255&r[e+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(e+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),t.put(n,13),e+=2}if(e<r.length)throw"illegal char at "+(e+1)}};return n},S=function(t){var e=t,n=0,o=0,i=0,r={read:function(){for(;i<8;){if(n>=e.length){if(0==i)return-1;throw"unexpected end of file./"+i}var t=e.charAt(n);if(n+=1,"="==t)return i=0,-1;t.match(/^\s$/)||(o=o<<6|a(t.charCodeAt(0)),i+=6)}var r=o>>>i-8&255;return i-=8,r}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return r},I=function(t,r,e){for(var n=function(t,r){var n=t,o=r,l=new Array(t*r),e={setPixel:function(t,r,e){l[r*n+t]=e},write:function(t){t.writeString("GIF87a"),t.writeShort(n),t.writeShort(o),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(n),t.writeShort(o),t.writeByte(0);var r=i(2);t.writeByte(2);for(var e=0;255<r.length-e;)t.writeByte(255),t.writeBytes(r,e,255),e+=255;t.writeByte(r.length-e),t.writeBytes(r,e,r.length-e),t.writeByte(0),t.writeString(";")}},i=function(t){for(var r=1<<t,e=1+(1<<t),n=t+1,o=h(),i=0;i<r;i+=1)o.add(String.fromCharCode(i));o.add(String.fromCharCode(r)),o.add(String.fromCharCode(e));var a=p(),u=function(t){var e=t,n=0,o=0,r={write:function(t,r){if(t>>>r!=0)throw"length over";for(;8<=n+r;)e.writeByte(255&(t<<n|o)),r-=8-n,t>>>=8-n,n=o=0;o|=t<<n,n+=r},flush:function(){0<n&&e.writeByte(o)}};return r}(a);u.write(r,n);var f=0,c=String.fromCharCode(l[f]);for(f+=1;f<l.length;){var g=String.fromCharCode(l[f]);f+=1,o.contains(c+g)?c+=g:(u.write(o.indexOf(c),n),o.size()<4095&&(o.size()==1<<n&&(n+=1),o.add(c+g)),c=g)}return u.write(o.indexOf(c),n),u.write(e,n),u.flush(),a.toByteArray()},h=function(){var r={},e=0,n={add:function(t){if(n.contains(t))throw"dup key:"+t;r[t]=e,e+=1},size:function(){return e},indexOf:function(t){return r[t]},contains:function(t){return void 0!==r[t]}};return n};return e}(t,r),o=0;o<r;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,e(i,o));var a=p();n.write(a);for(var u=function(){function e(t){a+=String.fromCharCode(r(63&t))}var n=0,o=0,i=0,a="",t={},r=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return t.writeByte=function(t){for(n=n<<8|255&t,o+=8,i+=1;6<=o;)e(n>>>o-6),o-=6},t.flush=function(){if(0<o&&(e(n<<6-o),o=n=0),i%3!=0)for(var t=3-i%3,r=0;r<t;r+=1)a+="="},t.toString=function(){return a},t}(),f=a.toByteArray(),c=0;c<f.length;c+=1)u.writeByte(f[c]);return u.flush(),"data:image/gif;base64,"+u};return i}();qrcode.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var r=[],e=0;e<t.length;e++){var n=t.charCodeAt(e);n<128?r.push(n):n<2048?r.push(192|n>>6,128|63&n):n<55296||57344<=n?r.push(224|n>>12,128|n>>6&63,128|63&n):(e++,n=65536+((1023&n)<<10|1023&t.charCodeAt(e)),r.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return r}(t)},function(t){"function"==typeof define&&define.amd?define([],t):"object"==typeof exports&&(module.exports=t())}(function(){return qrcode});</script>
+<style>
+
+:root{
+  --bg:#e9e9e6; --panel:#ffffff; --panel2:#f3f3f0; --ink:#161613; --muted:#5a5a53; --line:#161613; --line-soft:#c6c6bd;
+  --red:#b30d24; --red-dark:#8f0a1d; --red-soft:#fbe9eb; --amber:#fdf3d0; --amber-ink:#4a3a00;
+  --field:#ffffff; --field-line:#8a8a80;
+  --tab-bg:#161613; --tab-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1a18; --panel:#22221f; --panel2:#2a2a26; --ink:#f0efe9; --muted:#a3a298; --line:#f0efe9; --line-soft:#45453f;
+  --red:#e5384f; --red-dark:#b30d24; --red-soft:#3a171d; --amber:#332a12; --amber-ink:#ffd97a; --field:#1c1c1a; --field-line:#6a6a60;
+  --tab-bg:#f0efe9; --tab-ink:#161613; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit}
+button,select,summary,input:not([type="checkbox"]){min-height:44px}
+h1,h2,h3{font-family:"IBM Plex Sans",Helvetica,Arial,sans-serif;line-height:1.1;margin:0;font-weight:700}
+.wrap{max-width:1060px;margin:0 auto;padding:24px 16px 48px}
+/* masthead — like the top of a printed form */
+.top{display:flex;gap:14px;align-items:flex-start;border-bottom:2px solid var(--ink);padding-bottom:16px}
+.mast-mark{flex:none;width:38px;height:38px;border:2px solid var(--red);color:var(--red);display:grid;place-items:center;font-size:26px;font-weight:700;line-height:1;background:var(--panel)}
+h1{font-size:26px;letter-spacing:-.01em}
+.lede{max-width:620px;color:var(--muted);font-size:14.5px;margin:6px 0 0}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;color:var(--muted);margin:10px 0 0;text-transform:uppercase}
+/* layout — flat sheets, hard borders, no shadows, no floating cards */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;margin-top:20px}
+.panel{background:var(--panel);border:1.5px solid var(--line);border-radius:0;box-shadow:none}
+.form-panel{padding:0}
+.preview-panel{padding:20px;position:sticky;top:16px}
+.form-panel h2,.preview-panel h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em}
+.form-head{padding:16px 20px 0}
+.sub{color:var(--muted);font-size:13.5px;margin:6px 0 0}
+#ecForm{padding:4px 20px 8px}
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--tab-ink);background:var(--tab-bg);font-weight:700;padding:6px 10px;margin:0 0 14px;display:inline-block}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin-bottom:12px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+label .opt{font-weight:400;color:var(--muted)}
+input[type="text"],input[type="tel"],input[type="date"],select,textarea{width:100%;background:var(--field);border:1px solid var(--field-line);border-radius:0;padding:10px 11px;color:var(--ink);outline:none}
+textarea{resize:vertical;min-height:54px}
+input:focus,select:focus,textarea:focus{border-color:var(--ink);outline:2px solid var(--red);outline-offset:-1px}
+.hint{font-size:12px;color:var(--muted);margin-top:5px}
+.privacy{border-top:1px solid var(--line-soft);padding:14px 20px 18px;font-size:12.5px;color:var(--muted);display:block}
+.privacy strong{color:var(--ink)}
+/* preview controls */
+.lang-row{display:flex;flex-wrap:wrap;gap:0;margin:14px 0 18px;border:1.5px solid var(--line);width:fit-content;max-width:100%}
+.lang-btn{border:0;border-right:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:0;padding:8px 13px;cursor:pointer;font-weight:600;font-size:13.5px;min-height:40px}
+.lang-btn:last-child{border-right:0}
+.lang-btn[aria-pressed="true"]{background:var(--tab-bg);color:var(--tab-ink)}
+.lang-picker{margin:14px 0 18px}
+.lang-picker label{margin-top:10px}
+.lang-picker label:first-child{margin-top:0}
+.lang-picker select{width:100%}
+.lang-picker input[type="text"]{width:100%}
+.card-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 7px;display:flex;justify-content:space-between;gap:10px}
+.card-label:first-of-type{margin-top:4px}
+/* design picker — flat swatches, same hard-border language as the rest of the page */
+.design-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin:10px 0 4px}
+.design-btn{border:1.5px solid var(--line-soft);background:var(--panel);padding:0;cursor:pointer;text-align:left;border-radius:0;min-height:0}
+.design-btn .sw{display:block;height:36px;position:relative;border-bottom:1.5px solid var(--line-soft)}
+.design-btn .sw-head{display:block;height:13px}
+.design-btn .sw-dot{position:absolute;left:6px;bottom:5px;width:14px;height:7px;display:block}
+.design-btn .nm{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.03em;padding:5px 6px;color:var(--ink);text-transform:uppercase}
+.design-btn[aria-pressed="true"]{border-color:var(--ink);outline:2px solid var(--ink);outline-offset:-2px}
+.design-btn[aria-pressed="true"] .nm{font-weight:700}
+/* THE CARD — keep the card itself looking like a real plastic card */
+.ecard{--dhbg:#b30d24;--dhink:#fff;--dplusbg:#fff;--dplusink:#b30d24;--dbloodbg:#fff;--dbloodink:#b30d24;--dbloodsub:#6b6b62;--da:#b30d24;--dabg:#fdf3d0;--daink:#141310;--dbg:#fff;--dink:#141310;--dmut:#5c5c55;--dfoot:#8a8a80;--dhb:0 solid transparent;container-type:inline-size;width:100%;aspect-ratio:85.6/54;background:var(--dbg);color:var(--dink);border-radius:2.6cqw;overflow:hidden;border:1.5px solid #141310;box-shadow:none;display:flex;flex-direction:column;font-family:"IBM Plex Sans",sans-serif}
+#captureArea[data-design="navy"] .ecard{--dhbg:#12355b;--dplusink:#12355b;--dbloodink:#12355b;--da:#12355b;--dabg:#e2ebf6}
+#captureArea[data-design="teal"] .ecard{--dhbg:#0b6b62;--dplusink:#0b6b62;--dbloodink:#0b6b62;--da:#0b6b62;--dabg:#dcf0ec}
+#captureArea[data-design="charcoal"] .ecard{--dhbg:#101010;--dplusbg:#f0efe9;--dplusink:#141310;--dbloodbg:#f0efe9;--dbloodink:#141310;--da:#e8e7e0;--dabg:#3a3a34;--daink:#f5f4ee;--dbg:#1e1e1b;--dink:#f0efe9;--dmut:#a8a79d;--dfoot:#55554e}
+#captureArea[data-design="hivis"] .ecard{--dhbg:#f2c200;--dhink:#141310;--dplusbg:#141310;--dplusink:#f2c200;--dbloodbg:#141310;--dbloodink:#f2c200;--dbloodsub:#a89e7a;--da:#141310;--dabg:#f2c200}
+#captureArea[data-design="forest"] .ecard{--dhbg:#1f5130;--dplusink:#1f5130;--dbloodink:#1f5130;--da:#1f5130;--dabg:#e4efe0}
+#captureArea[data-design="burgundy"] .ecard{--dhbg:#5f1429;--dplusink:#5f1429;--dbloodink:#5f1429;--da:#5f1429;--dabg:#f5e2e8}
+#captureArea[data-design="ocean"] .ecard{--dhbg:#fff;--dhink:#0e5a8a;--dplusbg:#0e5a8a;--dplusink:#fff;--dbloodbg:#0e5a8a;--dbloodink:#fff;--dbloodsub:#bcd6e6;--da:#0e5a8a;--dabg:#dfedf6;--dhb:1.1cqw solid #0e5a8a}
+#captureArea[data-design="copper"] .ecard{--dhbg:#9a4a12;--dplusink:#9a4a12;--dbloodink:#9a4a12;--da:#9a4a12;--dabg:#fbeed8}
+#captureArea[data-design="slate"] .ecard{--dhbg:#fff;--dhink:#3e4c5e;--dplusbg:#3e4c5e;--dplusink:#fff;--dbloodbg:#3e4c5e;--dbloodink:#fff;--dbloodsub:#c3ccd6;--da:#3e4c5e;--dabg:#e6eaef;--dhb:1.1cqw solid #3e4c5e}
+#captureArea[data-design="cobalt"] .ecard{--dhbg:#2743a6;--dplusink:#2743a6;--dbloodink:#2743a6;--da:#2743a6;--dabg:#e3e8fa}
+.ecard-head{background:var(--dhbg);color:var(--dhink);border-bottom:var(--dhb);display:flex;align-items:center;gap:2.5cqw;padding:2.6cqw 4cqw}
+.ecard-head .plus{background:var(--dplusbg);color:var(--dplusink);font-weight:900;width:6.5cqw;height:6.5cqw;display:grid;place-items:center;border-radius:.8cqw;font-size:5cqw;line-height:1;flex:none}
+.ecard-head .t1{font-family:"Archivo",sans-serif;font-weight:800;font-size:4.6cqw;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.ecard-head .t2{font-size:2.4cqw;opacity:.9;font-family:"IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.blood{margin-left:auto;text-align:center;background:var(--dbloodbg);color:var(--dbloodink);border-radius:.8cqw;padding:1cqw 2.4cqw;flex:none}
+.blood small{display:block;font-size:1.9cqw;font-family:"IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--dbloodsub)}
+.blood strong{font-family:"Archivo",sans-serif;font-size:5.2cqw;line-height:1}
+.ecard-body{padding:3cqw 4cqw 2cqw;display:grid;grid-template-columns:1fr 20cqw;gap:3.5cqw;flex:1}
+.name{font-family:"Archivo",sans-serif;font-weight:800;font-size:5cqw;line-height:1.05;letter-spacing:-.01em;word-break:break-word}
+.dob{font-family:"IBM Plex Mono",monospace;font-size:2.5cqw;color:var(--dmut);margin-top:.8cqw}
+.block{margin-top:2.2cqw}
+.block .k{font-family:"IBM Plex Mono",monospace;font-size:2cqw;letter-spacing:.12em;text-transform:uppercase;color:var(--da);font-weight:600}
+.block .v{font-size:3cqw;font-weight:600;line-height:1.3;word-break:break-word}
+.block .v.normal{font-weight:400;color:var(--dink);opacity:.85}
+.allergy .v{background:var(--dabg);color:var(--daink);padding:.4cqw 1.2cqw;display:inline-block}
+.qrbox{text-align:center}
+.qrbox .qr{width:19cqw;height:19cqw;margin:0 auto;background:#fff;border:1px solid #d8d8d0;padding:1cqw}
+.qrbox .qr img,.qrbox .qr canvas{width:100%!important;height:100%!important}
+.qrbox p{font-size:2.1cqw;color:var(--dmut);line-height:1.3;margin:1.2cqw 0 0;font-family:"IBM Plex Mono",monospace}
+.ecard-foot{border-top:1px dashed var(--dfoot);padding:2.2cqw 4cqw 2.8cqw;display:grid;grid-template-columns:1fr 1fr;gap:3cqw}
+.contact .k{font-family:"IBM Plex Mono",monospace;font-size:1.9cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--dmut)}
+.contact .n{font-weight:700;font-size:3cqw;line-height:1.2}
+.contact .p{font-family:"IBM Plex Mono",monospace;font-size:2.7cqw;color:var(--da);font-weight:600}
+.placeholder{color:#9a9a90;font-weight:400}
+.ecard.back .ecard-body{grid-template-columns:20cqw 1fr}
+.ecard.back .note{font-size:2.9cqw;line-height:1.45}
+.actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:20px}
+.btn{border-radius:0;padding:13px 14px;cursor:pointer;font-weight:700;font-size:14.5px;border:1.5px solid var(--ink);background:var(--panel);color:var(--ink);min-height:48px;text-transform:none}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn:active{transform:translateY(1px)}
+.status{font-size:13px;color:var(--muted);min-height:20px;margin-top:10px;text-align:left}
+.qrtext{font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;background:var(--panel2);border:1.5px solid var(--line);padding:14px 15px;margin:0;color:var(--ink)}
+.qrtext.flash{outline:2px solid var(--red);outline-offset:2px}
+#qrWarn{color:var(--red);font-weight:600}
+.tips{margin-top:28px;border-top:2px solid var(--ink);padding-top:16px}
+.tips h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em}
+.tips ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+.tips li{margin-bottom:6px}
+.tips li strong{color:var(--ink)}
+footer{margin-top:28px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:14px;font-family:"IBM Plex Mono",monospace}
+/* details view */
+.details{max-width:640px;margin:0 auto;padding:22px 16px 56px;display:none}
+body.details-mode .wrap{display:none}
+body.details-mode .details{display:block}
+.d-head{background:var(--red);color:#fff;border-radius:0;padding:18px 20px;display:flex;gap:14px;align-items:center}
+.d-head .plus{background:#fff;color:var(--red);font-weight:900;width:42px;height:42px;display:grid;place-items:center;border-radius:0;font-size:30px;line-height:1;flex:none}
+.d-head .t1{font-weight:700;font-size:22px;text-transform:uppercase;line-height:1.05}
+.d-head .t2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.92}
+.d-main{background:var(--panel);border:1.5px solid var(--line);border-radius:0;box-shadow:none;padding:20px;margin-top:12px}
+.d-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.d-name{font-weight:700;font-size:30px;line-height:1.05;letter-spacing:-.01em;word-break:break-word}
+.d-dob{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--muted);margin-top:6px}
+.d-blood{text-align:center;border:2px solid var(--red);border-radius:0;padding:8px 16px;flex:none}
+.d-blood small{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.d-blood strong{font-size:28px;color:var(--red);line-height:1.1}
+.d-alert{background:var(--amber);color:var(--amber-ink);border:1.5px solid var(--ink);border-radius:0;padding:13px 15px;margin-top:18px}
+.d-alert .k,.d-sec .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.d-alert .k{color:var(--red)}
+.d-alert .v{font-size:18px;font-weight:700;line-height:1.35;margin-top:3px;word-break:break-word}
+.d-sec{margin-top:18px}
+.d-sec .k{color:var(--red)}
+.d-sec .v{font-size:16.5px;line-height:1.45;margin-top:3px;word-break:break-word;white-space:pre-wrap}
+.d-call{display:flex;align-items:center;gap:14px;background:var(--panel2);border:1.5px solid var(--line);border-radius:0;padding:13px 15px;margin-top:10px;text-decoration:none;color:var(--ink);min-height:56px}
+.d-call .who{flex:1;min-width:0}
+.d-call .n{font-weight:700;font-size:16.5px;line-height:1.25;word-break:break-word}
+.d-call .r{font-size:13px;color:var(--muted)}
+.d-call .p{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:15.5px;color:var(--red);margin-top:2px;word-break:break-all}
+.d-call .go{background:var(--red);color:#fff;font-weight:700;font-size:14px;border-radius:0;padding:10px 16px;flex:none}
+.d-maker{margin-top:18px;width:100%;background:var(--panel);border:1.5px solid var(--ink);color:var(--ink);border-radius:0;padding:13px 14px;font-weight:700;font-size:15px;cursor:pointer;min-height:48px}
+.d-foot{color:var(--muted);font-size:13px;text-align:left;margin-top:14px}
+@media(max-width:860px){
+  .grid{grid-template-columns:1fr}
+  .preview-panel{position:static}
+  .row{grid-template-columns:1fr}
+  h1{font-size:23px}
+}
+@media print{
+  body{background:#fff}
+  .top,.form-panel,.tips,footer,.preview-panel .no-print{display:none!important}
+  .grid{display:block;margin:0}
+  .preview-panel{box-shadow:none;border:0;padding:0;position:static}
+  .panel{box-shadow:none}
+  .wrap{padding:0;max-width:none}
+  .ecard{box-shadow:none;break-inside:avoid;width:85.6mm}
+}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mast-mark" aria-hidden="true">+</div>
+    <div>
+      <h1>Emergency Card</h1>
+      <p class="lede">A wallet card with the details that matter in the first minutes — blood group, allergies, medicines and two people to call. For an adult, a child, a parent, anyone.</p>
+      <p class="meta">Wallet size 85.6 × 54 mm &nbsp;·&nbsp; QR holds the details as plain text — no link, no internet needed to scan &nbsp;·&nbsp; No account, nothing uploaded</p>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- FORM -->
+    <section class="panel form-panel" aria-labelledby="formTitle">
+      <div class="form-head"><h2 id="formTitle">1 — Fill in the form</h2>
+      <p class="sub">Keep it short and current. Leave anything blank that does not apply — it simply will not show on the card.</p></div>
+      <form id="ecForm" autocomplete="off">
+        <fieldset>
+          <legend>01 · The person</legend>
+          <div class="field"><label for="fName">Full name</label><input type="text" id="fName" placeholder="e.g. Alex Rahman" maxlength="48"></div>
+          <div class="row">
+            <div class="field"><label for="fDob">Date of birth <span class="opt">(optional)</span></label><input type="date" id="fDob"></div>
+            <div class="field"><label for="fBlood">Blood group</label>
+              <select id="fBlood"><option value="">Don’t know / not shown</option><option>O+</option><option>O−</option><option>A+</option><option>A−</option><option>B+</option><option>B−</option><option>AB+</option><option>AB−</option></select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>02 · Medical</legend>
+          <div class="field"><label for="fAllergy">Allergies</label><input type="text" id="fAllergy" placeholder="e.g. Penicillin, peanuts" maxlength="90"><p class="hint">Write “None known” if that is true — it helps helpers too.</p></div>
+          <div class="field"><label for="fMeds">Medicines taken regularly</label><textarea id="fMeds" placeholder="e.g. Insulin, Salbutamol inhaler" maxlength="140"></textarea></div>
+          <div class="field"><label for="fCond">Conditions a helper should know <span class="opt">(optional)</span></label><textarea id="fCond" placeholder="e.g. Asthma, epilepsy, diabetes" maxlength="140"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>03 · Two people to call</legend>
+          <div class="row">
+            <div class="field"><label for="c1Name">Contact 1 — name</label><input type="text" id="c1Name" placeholder="Name" maxlength="36"></div>
+            <div class="field"><label for="c1Rel">Relationship</label><input type="text" id="c1Rel" placeholder="e.g. Mother, spouse" maxlength="24"></div>
+          </div>
+          <div class="field"><label for="c1Phone">Contact 1 — phone</label><input type="tel" id="c1Phone" placeholder="+880 1XXX-XXXXXX" maxlength="24"></div>
+          <div class="row">
+            <div class="field"><label for="c2Name">Contact 2 — name</label><input type="text" id="c2Name" placeholder="Name" maxlength="36"></div>
+            <div class="field"><label for="c2Rel">Relationship</label><input type="text" id="c2Rel" placeholder="e.g. Brother, friend" maxlength="24"></div>
+          </div>
+          <div class="field"><label for="c2Phone">Contact 2 — phone</label><input type="tel" id="c2Phone" placeholder="+880 1XXX-XXXXXX" maxlength="24"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>04 · On the back</legend>
+          <div class="field"><label for="fNote">One short note <span class="opt">(optional)</span></label><textarea id="fNote" placeholder="e.g. Wears hearing aids. Speaks Bangla and English." maxlength="160"></textarea></div>
+        </fieldset>
+      </form>
+      <div class="privacy"><p style="margin:0"><strong>Private by design:</strong> nothing is uploaded and there is no account or database. Your details are written into the QR code itself as plain text — the code is not a link and points nowhere. Any phone camera or scanner app reads the text straight out of the code, with no signal and no page to load, even on a phone that has never seen this page. Anyone who scans the QR can read the details, just like reading the card, so keep it somewhere sensible.</p></div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="panel preview-panel" aria-labelledby="prevTitle">
+      <div class="no-print">
+        <h2 id="prevTitle">2 — Your card</h2>
+        <p class="sub" style="margin-bottom:0">Card language — useful when travelling, from all over the world. The form stays in English; the printed labels and the text inside the QR change to the language you pick.</p>
+        <div class="lang-picker">
+          <label for="langSearch">Search languages</label>
+          <input type="text" id="langSearch" placeholder="Type a language — e.g. Arabic, Hindi, Japanese, Swahili…" autocomplete="off">
+          <label for="langSelect">Card language</label>
+          <select id="langSelect" aria-label="Card language"></select>
+          <p class="hint" id="langHint"></p>
+        </div>
+        <p class="sub" style="margin-bottom:0">Card design — eleven printed styles. The design changes the colours and header style only; the information and the QR stay exactly the same, and the design you pick is the one that prints and downloads.</p>
+        <div class="card-label" style="margin-top:12px"><span>Design</span><span id="designName">Classic Red</span></div>
+        <div class="design-grid" id="designGrid" role="group" aria-label="Card design"></div>
+      </div>
+
+      <div id="captureArea" data-design="classic">
+        <div class="card-label"><span>Front</span><span>85.6 × 54 mm at 100%</span></div>
+        <article class="ecard" id="cardFront" aria-label="Emergency card front preview">
+          <div class="ecard-head">
+            <span class="plus">+</span>
+            <div><div class="t1" data-i="title">Emergency Card</div><div class="t2" data-i="subtitle">In case of emergency</div></div>
+            <div class="blood"><small data-i="blood">Blood</small><strong id="pBlood">—</strong></div>
+          </div>
+          <div class="ecard-body">
+            <div>
+              <div class="name" id="pName"><span class="placeholder">Your name</span></div>
+              <div class="dob" id="pDob"></div>
+              <div class="block allergy"><span class="k" data-i="allergies">Allergies</span><br><span class="v" id="pAllergy"><span class="placeholder">—</span></span></div>
+              <div class="block"><span class="k" data-i="meds">Medications</span><div class="v normal" id="pMeds"><span class="placeholder">—</span></div></div>
+              <div class="block" id="condBlock" style="display:none"><span class="k" data-i="conditions">Conditions</span><div class="v normal" id="pCond"></div></div>
+            </div>
+            <div class="qrbox"><div class="qr" id="qrFront"></div><p data-i="scan">Scan to read my details</p></div>
+          </div>
+          <div class="ecard-foot">
+            <div class="contact"><div class="k"><span data-i="contact">Emergency contact</span> · <span id="pC1Rel"></span></div><div class="n" id="pC1Name"><span class="placeholder">Contact 1</span></div><div class="p" id="pC1Phone"></div></div>
+            <div class="contact"><div class="k"><span data-i="contact">Emergency contact</span> · <span id="pC2Rel"></span></div><div class="n" id="pC2Name"><span class="placeholder">Contact 2</span></div><div class="p" id="pC2Phone"></div></div>
+          </div>
+        </article>
+
+        <div class="card-label"><span>Back</span><span>Print double-sided or as a second card</span></div>
+        <article class="ecard back" aria-label="Emergency card back preview">
+          <div class="ecard-head">
+            <span class="plus">+</span>
+            <div><div class="t1" data-i="title">Emergency Card</div><div class="t2" id="pFor">—</div></div>
+            <div class="blood"><small data-i="blood">Blood</small><strong id="pBlood2">—</strong></div>
+          </div>
+          <div class="ecard-body">
+            <div class="qrbox" style="text-align:left"><div class="qr" id="qrBack" style="margin:0"></div><p data-i="scan">Scan to read my details</p></div>
+            <div>
+              <div class="block" style="margin-top:0"><span class="k" data-i="note">Note</span><div class="note" id="pNote"><span class="placeholder">Anything else a helper should know, in one or two lines.</span></div></div>
+              <div class="block"><span class="k" data-i="callFirst">If I cannot speak, please call</span><div class="v" id="pCallFirst">—</div></div>
+            </div>
+          </div>
+          <div class="ecard-foot" style="grid-template-columns:1fr"><div class="contact"><div class="k" data-i="keep">Keep this card in a wallet, bag or phone case · Update it when medicines change</div></div></div>
+        </article>
+      </div>
+
+      <div class="actions no-print">
+        <button type="button" class="btn primary" id="btnPng">Download card image (PNG)</button>
+        <button type="button" class="btn" id="btnPreview">Show exactly what a scan displays</button>
+      </div>
+      <p class="status no-print" id="statusMsg" role="status"></p>
+      <div class="no-print" id="qrTextBox" hidden>
+        <div class="card-label"><span>What any scanner shows — no internet involved</span><span id="qrMeta"></span></div>
+        <pre class="qrtext" id="qrTextPreview"></pre>
+        <p class="hint" id="qrWarn" style="display:none"></p>
+        <p class="hint">This is the whole QR: plain text, not a web address. A scanner reads it directly from the printed squares — there is no page to load, so a first-time scan works in flight mode, in a basement, anywhere.</p>
+      </div>
+      <p class="hint no-print" style="text-align:center">To print: use your browser or device Print option and choose 100% / Actual size, not “Fit to page” — only the two cards print, at true wallet size.</p>
+    </section>
+  </div>
+
+  <section class="tips">
+    <h2>Before you carry it</h2>
+    <ul>
+      <li><strong>Keep it current.</strong> Reprint the card whenever medicines or phone numbers change — an old card can mislead.</li>
+      <li><strong>Check the QR once.</strong> Scan your printed card with any phone camera before you carry it — put the phone in flight mode first if you want to prove it. The scanner should show the details as plain text straight away: name, blood group, allergies, medicines and both phone numbers, with nothing to load and no signal needed.</li>
+      <li><strong>One card, a few places.</strong> Wallet, school bag, glove box, inside a phone case — the same print works everywhere.</li>
+      <li><strong>For a child,</strong> first name plus a contact is often enough on the outside; the fuller details live in the QR.</li>
+      <li><strong>This is not medical advice</strong> and it does not replace an official medical ID — it is a simple, carry-everywhere summary you control.</li>
+    </ul>
+  </section>
+
+  <footer><span>Emergency Card — free to copy, translate and improve.</span><span>The QR is text, not a link — scanning works with no signal at all.</span></footer>
+</div>
+
+<!-- DETAILS VIEW — kept so cards printed earlier, whose QR was a link, still open properly. New cards carry plain text in the QR instead. -->
+<main class="details" id="detailsView" aria-labelledby="dTitle">
+  <div class="d-head">
+    <span class="plus">+</span>
+    <div><div class="t1" id="dTitle">Emergency Card</div><div class="t2" id="dSubtitle">In case of emergency</div></div>
+  </div>
+  <div class="d-main">
+    <div class="d-top">
+      <div><div class="d-name" id="dName">—</div><div class="d-dob" id="dDob"></div></div>
+      <div class="d-blood" id="dBloodBox"><small id="dBloodLabel">Blood</small><strong id="dBlood">—</strong></div>
+    </div>
+    <div class="d-alert" id="dAllergyBox"><div class="k" id="dAllergyLabel">Allergies</div><div class="v" id="dAllergy">—</div></div>
+    <div class="d-sec" id="dMedsBox"><div class="k" id="dMedsLabel">Medications</div><div class="v" id="dMeds"></div></div>
+    <div class="d-sec" id="dCondBox"><div class="k" id="dCondLabel">Conditions</div><div class="v" id="dCond"></div></div>
+    <div class="d-sec" id="dNoteBox"><div class="k" id="dNoteLabel">Note</div><div class="v" id="dNote"></div></div>
+    <div class="d-sec" id="dContactsBox"><div class="k" id="dContactsLabel">Emergency contacts — tap to call</div><div id="dContacts"></div></div>
+  </div>
+  <button type="button" class="d-maker" id="btnMaker">Make your own emergency card</button>
+  <p class="d-foot" id="dFoot">These details came from the QR code itself — nothing was fetched or looked up.</p>
+</main>
+
+<script>
+/* Worldwide languages — native name, English name, and right-to-left flag for each.
+   Translations for the original five languages live in the main script below;
+   EXTRA_I below adds full card + QR translations for every other language here. */
+var LANG_META = [
+{code:"en",name:"English",native:"English"},{code:"es",name:"Spanish",native:"Español"},{code:"fr",name:"French",native:"Français"},{code:"de",name:"German",native:"Deutsch"},{code:"bn",name:"Bengali",native:"বাংলা"},
+{code:"pt",name:"Portuguese",native:"Português"},{code:"it",name:"Italian",native:"Italiano"},{code:"nl",name:"Dutch",native:"Nederlands"},{code:"sv",name:"Swedish",native:"Svenska"},{code:"da",name:"Danish",native:"Dansk"},
+{code:"no",name:"Norwegian",native:"Norsk"},{code:"fi",name:"Finnish",native:"Suomi"},{code:"pl",name:"Polish",native:"Polski"},{code:"cs",name:"Czech",native:"Čeština"},{code:"sk",name:"Slovak",native:"Slovenčina"},
+{code:"hu",name:"Hungarian",native:"Magyar"},{code:"ro",name:"Romanian",native:"Română"},{code:"bg",name:"Bulgarian",native:"Български"},{code:"sr",name:"Serbian",native:"Српски"},{code:"el",name:"Greek",native:"Ελληνικά"},
+{code:"ru",name:"Russian",native:"Русский"},{code:"uk",name:"Ukrainian",native:"Українська"},{code:"tr",name:"Turkish",native:"Türkçe"},{code:"ar",name:"Arabic",native:"العربية",rtl:true},{code:"fa",name:"Persian",native:"فارسی",rtl:true},
+{code:"he",name:"Hebrew",native:"עברית",rtl:true},{code:"ur",name:"Urdu",native:"اردو",rtl:true},{code:"hi",name:"Hindi",native:"हिन्दी"},{code:"ta",name:"Tamil",native:"தமிழ்"},{code:"te",name:"Telugu",native:"తెలుగు"},
+{code:"mr",name:"Marathi",native:"मराठी"},{code:"gu",name:"Gujarati",native:"ગુજરાતી"},{code:"pa",name:"Punjabi",native:"ਪੰਜਾਬੀ"},{code:"ne",name:"Nepali",native:"नेपाली"},{code:"zh",name:"Chinese (Simplified)",native:"中文（简体）"},
+{code:"ja",name:"Japanese",native:"日本語"},{code:"ko",name:"Korean",native:"한국어"},{code:"th",name:"Thai",native:"ไทย"},{code:"vi",name:"Vietnamese",native:"Tiếng Việt"},{code:"id",name:"Indonesian",native:"Bahasa Indonesia"},
+{code:"ms",name:"Malay",native:"Bahasa Melayu"},{code:"tl",name:"Filipino",native:"Filipino"},{code:"sw",name:"Swahili",native:"Kiswahili"},{code:"am",name:"Amharic",native:"አማርኛ"},{code:"ha",name:"Hausa",native:"Hausa"},
+{code:"yo",name:"Yoruba",native:"Yorùbá"},{code:"ig",name:"Igbo",native:"Igbo"},{code:"zu",name:"Zulu",native:"isiZulu"},{code:"af",name:"Afrikaans",native:"Afrikaans"},{code:"kk",name:"Kazakh",native:"Қазақша"},
+{code:"uz",name:"Uzbek",native:"O‘zbek"},{code:"ka",name:"Georgian",native:"ქართული"},{code:"hy",name:"Armenian",native:"Հայերեն"},{code:"my",name:"Burmese",native:"မြန်မာ"},{code:"km",name:"Khmer",native:"ខ្មែរ"},
+{code:"si",name:"Sinhala",native:"සිංහල"},{code:"mn",name:"Mongolian",native:"Монгол"}
+];
+var EXTRA_I = {
+pt:{title:"Cartão de Emergência",subtitle:"Em caso de emergência",blood:"Sangue",allergies:"Alergias",meds:"Medicamentos",conditions:"Condições",contact:"Contato de emergência",scan:"Digitalize para ver os detalhes",note:"Nota",callFirst:"Se eu não puder falar, ligue para",keep:"Guarde na carteira, bolsa ou capa do telefone · Atualize quando os medicamentos mudarem",dob:"Nascimento",help:"Informações médicas essenciais para uso em emergência.",thanks:"Obrigado pela sua ajuda."},
+it:{title:"Carta di Emergenza",subtitle:"In caso di emergenza",blood:"Sangue",allergies:"Allergie",meds:"Farmaci",conditions:"Condizioni",contact:"Contatto di emergenza",scan:"Scansiona per i dettagli",note:"Nota",callFirst:"Se non posso parlare, chiama",keep:"Conserva nel portafoglio, nella borsa o nella custodia del telefono · Aggiorna quando cambiano i farmaci",dob:"Nascita",help:"Informazioni mediche essenziali per le emergenze.",thanks:"Grazie per l'assistenza."},
+nl:{title:"Noodkaart",subtitle:"In geval van nood",blood:"Bloed",allergies:"Allergieën",meds:"Medicijnen",conditions:"Aandoeningen",contact:"Noodcontact",scan:"Scan voor details",note:"Opmerking",callFirst:"Als ik niet kan spreken, bel",keep:"Bewaar in portemonnee, tas of telefoonhoesje · Werk bij als medicijnen veranderen",dob:"Geb.",help:"Essentiële medische informatie voor noodgevallen.",thanks:"Bedankt voor uw hulp."},
+sv:{title:"Nödkort",subtitle:"I nödfall",blood:"Blod",allergies:"Allergier",meds:"Läkemedel",conditions:"Tillstånd",contact:"Nödkontakt",scan:"Skanna för detaljer",note:"Anteckning",callFirst:"Om jag inte kan tala, ring",keep:"Förvara i plånbok, väska eller telefonskal · Uppdatera när läkemedel ändras",dob:"Född",help:"Viktig medicinsk information för nödsituationer.",thanks:"Tack för din hjälp."},
+da:{title:"Nødkort",subtitle:"I nødstilfælde",blood:"Blod",allergies:"Allergier",meds:"Medicin",conditions:"Tilstande",contact:"Nødkontakt",scan:"Scan for detaljer",note:"Note",callFirst:"Hvis jeg ikke kan tale, ring til",keep:"Opbevar i pung, taske eller telefonetui · Opdater, når medicin ændres",dob:"Født",help:"Vigtig medicinsk information til nødsituationer.",thanks:"Tak for din hjælp."},
+no:{title:"Nødkort",subtitle:"I nødstilfelle",blood:"Blod",allergies:"Allergier",meds:"Medisiner",conditions:"Tilstander",contact:"Nødkontakt",scan:"Skann for detaljer",note:"Merknad",callFirst:"Hvis jeg ikke kan snakke, ring",keep:"Oppbevar i lommebok, veske eller telefondeksel · Oppdater når medisiner endres",dob:"Født",help:"Viktig medisinsk informasjon for nødsituasjoner.",thanks:"Takk for hjelpen."},
+fi:{title:"Hätäkortti",subtitle:"Hätätilanteessa",blood:"Veri",allergies:"Allergiat",meds:"Lääkkeet",conditions:"Sairaudet",contact:"Hätäyhteyshenkilö",scan:"Skannaa tiedot",note:"Huomautus",callFirst:"Jos en voi puhua, soita",keep:"Säilytä lompakossa, laukussa tai puhelinkotelossa · Päivitä, kun lääkkeet muuttuvat",dob:"Synt.",help:"Oleelliset lääketieteelliset tiedot hätätilanteita varten.",thanks:"Kiitos avustasi."},
+pl:{title:"Karta Ratunkowa",subtitle:"W nagłym wypadku",blood:"Krew",allergies:"Alergie",meds:"Leki",conditions:"Choroby",contact:"Kontakt alarmowy",scan:"Zeskanuj, aby zobaczyć szczegóły",note:"Uwaga",callFirst:"Jeśli nie mogę mówić, zadzwoń do",keep:"Przechowuj w portfelu, torbie lub etui na telefon · Aktualizuj, gdy zmienią się leki",dob:"Ur.",help:"Podstawowe informacje medyczne do wykorzystania w nagłych wypadkach.",thanks:"Dziękuję za pomoc."},
+cs:{title:"Nouzová karta",subtitle:"V případě nouze",blood:"Krev",allergies:"Alergie",meds:"Léky",conditions:"Onemocnění",contact:"Nouzový kontakt",scan:"Naskenujte pro podrobnosti",note:"Poznámka",callFirst:"Pokud nemohu mluvit, volejte",keep:"Uchovávejte v peněžence, tašce nebo pouzdře na telefon · Aktualizujte při změně léků",dob:"Nar.",help:"Základní zdravotní informace pro případ nouze.",thanks:"Děkuji za vaši pomoc."},
+sk:{title:"Núdzová karta",subtitle:"V prípade núdze",blood:"Krv",allergies:"Alergie",meds:"Lieky",conditions:"Ochorenia",contact:"Núdzový kontakt",scan:"Naskenujte pre podrobnosti",note:"Poznámka",callFirst:"Ak nemôžem hovoriť, volajte",keep:"Uchovávajte v peňaženke, taške alebo puzdre na telefón · Aktualizujte pri zmene liekov",dob:"Nar.",help:"Základné zdravotné informácie pre prípad núdze.",thanks:"Ďakujem za vašu pomoc."},
+hu:{title:"Vészhelyzeti Kártya",subtitle:"Vészhelyzet esetén",blood:"Vér",allergies:"Allergiák",meds:"Gyógyszerek",conditions:"Betegségek",contact:"Vészhelyzeti kapcsolattartó",scan:"Olvassa be a részletekért",note:"Megjegyzés",callFirst:"Ha nem tudok beszélni, hívja",keep:"Tárolja pénztárcában, táskában vagy telefontokban · Frissítse, ha változnak a gyógyszerek",dob:"Szül.",help:"Alapvető orvosi információk vészhelyzet esetére.",thanks:"Köszönöm a segítségét."},
+ro:{title:"Card de Urgență",subtitle:"În caz de urgență",blood:"Sânge",allergies:"Alergii",meds:"Medicamente",conditions:"Afecțiuni",contact:"Contact de urgență",scan:"Scanați pentru detalii",note:"Notă",callFirst:"Dacă nu pot vorbi, sunați la",keep:"Păstrați în portofel, geantă sau husă de telefon · Actualizați când se schimbă medicamentele",dob:"Născut",help:"Informații medicale esențiale pentru urgențe.",thanks:"Vă mulțumesc pentru ajutor."},
+bg:{title:"Карта за спешни случаи",subtitle:"При спешен случай",blood:"Кръв",allergies:"Алергии",meds:"Лекарства",conditions:"Заболявания",contact:"Контакт за спешни случаи",scan:"Сканирайте за подробности",note:"Бележка",callFirst:"Ако не мога да говоря, моля обадете се на",keep:"Съхранявайте в портфейл, чанта или калъф за телефон · Актуализирайте при промяна на лекарствата",dob:"Роден",help:"Основна медицинска информация за спешни случаи.",thanks:"Благодаря ви за помощта."},
+sr:{title:"Картица за хитне случајеве",subtitle:"У хитном случају",blood:"Крв",allergies:"Алергије",meds:"Лекови",conditions:"Стања",contact:"Контакт за хитне случајеве",scan:"Скенирајте за детаље",note:"Напомена",callFirst:"Ако не могу да говорим, позовите",keep:"Чувајте у новчанику, торби или футроли за телефон · Ажурирајте када се лекови промене",dob:"Рођ.",help:"Основне медицинске информације за хитне случајеве.",thanks:"Хвала вам на помоћи."},
+el:{title:"Κάρτα Έκτακτης Ανάγκης",subtitle:"Σε περίπτωση έκτακτης ανάγκης",blood:"Αίμα",allergies:"Αλλεργίες",meds:"Φάρμακα",conditions:"Παθήσεις",contact:"Επαφή έκτακτης ανάγκης",scan:"Σαρώστε για λεπτομέρειες",note:"Σημείωση",callFirst:"Αν δεν μπορώ να μιλήσω, καλέστε",keep:"Φυλάξτε στο πορτοφόλι, την τσάντα ή τη θήκη τηλεφώνου · Ενημερώστε όταν αλλάζουν τα φάρμακα",dob:"Γεν.",help:"Βασικές ιατρικές πληροφορίες για έκτακτη ανάγκη.",thanks:"Σας ευχαριστώ για τη βοήθειά σας."},
+ru:{title:"Карта экстренной помощи",subtitle:"В экстренной ситуации",blood:"Кровь",allergies:"Аллергии",meds:"Лекарства",conditions:"Заболевания",contact:"Экстренный контакт",scan:"Отсканируйте для подробностей",note:"Примечание",callFirst:"Если я не могу говорить, позвоните",keep:"Храните в кошельке, сумке или чехле телефона · Обновляйте при смене лекарств",dob:"Дата рожд.",help:"Основная медицинская информация для экстренных случаев.",thanks:"Спасибо за вашу помощь."},
+uk:{title:"Картка екстреної допомоги",subtitle:"У надзвичайній ситуації",blood:"Кров",allergies:"Алергії",meds:"Ліки",conditions:"Захворювання",contact:"Екстрений контакт",scan:"Відскануйте для деталей",note:"Примітка",callFirst:"Якщо я не можу говорити, зателефонуйте",keep:"Зберігайте в гаманці, сумці або чохлі телефону · Оновлюйте при зміні ліків",dob:"Дата нар.",help:"Основна медична інформація для надзвичайних ситуацій.",thanks:"Дякую за вашу допомогу."},
+tr:{title:"Acil Durum Kartı",subtitle:"Acil durumda",blood:"Kan",allergies:"Alerjiler",meds:"İlaçlar",conditions:"Hastalıklar",contact:"Acil durum kişisi",scan:"Ayrıntılar için tarayın",note:"Not",callFirst:"Konuşamıyorsam lütfen arayın",keep:"Cüzdanda, çantada veya telefon kılıfında saklayın · İlaçlar değişince güncelleyin",dob:"Doğum",help:"Acil durumlarda kullanılmak üzere temel tıbbi bilgiler.",thanks:"Yardımınız için teşekkür ederim."},
+ar:{title:"بطاقة الطوارئ",subtitle:"في حالة الطوارئ",blood:"الدم",allergies:"الحساسية",meds:"الأدوية",conditions:"الحالات الطبية",contact:"جهة اتصال الطوارئ",scan:"امسح لعرض التفاصيل",note:"ملاحظة",callFirst:"إذا لم أستطع التحدث، يرجى الاتصال بـ",keep:"احتفظ بها في المحفظة أو الحقيبة أو غطاء الهاتف · حدّثها عند تغيير الأدوية",dob:"تاريخ الولادة",help:"معلومات طبية أساسية للاستخدام في حالات الطوارئ.",thanks:"شكراً لمساعدتكم."},
+fa:{title:"کارت اضطراری",subtitle:"در مواقع اضطراری",blood:"خون",allergies:"آلرژی‌ها",meds:"داروها",conditions:"بیماری‌ها",contact:"تماس اضطراری",scan:"برای جزئیات اسکن کنید",note:"یادداشت",callFirst:"اگر نمی‌توانم صحبت کنم، لطفاً تماس بگیرید با",keep:"در کیف پول، کیف یا قاب تلفن نگه دارید · هنگام تغییر داروها به‌روز کنید",dob:"تولد",help:"اطلاعات پزشکی ضروری برای استفاده در مواقع اضطراری.",thanks:"از کمک شما سپاسگزارم."},
+he:{title:"כרטיס חירום",subtitle:"במקרה חירום",blood:"דם",allergies:"אלרגיות",meds:"תרופות",conditions:"מצבים רפואיים",contact:"איש קשר לחירום",scan:"סרקו לפרטים",note:"הערה",callFirst:"אם איני יכול לדבר, אנא התקשרו אל",keep:"שמרו בארנק, בתיק או בכיסוי הטלפון · עדכנו כאשר התרופות משתנות",dob:"לידה",help:"מידע רפואי חיוני לשימוש במקרה חירום.",thanks:"תודה על עזרתכם."},
+ur:{title:"ایمرجنسی کارڈ",subtitle:"ہنگامی صورتحال میں",blood:"خون",allergies:"الرجی",meds:"ادویات",conditions:"بیماریاں",contact:"ہنگامی رابطہ",scan:"تفصیلات کے لیے اسکین کریں",note:"نوٹ",callFirst:"اگر میں بول نہ سکوں تو براہ کرم کال کریں",keep:"بٹوے، بیگ یا فون کیس میں رکھیں · ادویات بدلنے پر اپ ڈیٹ کریں",dob:"پیدائش",help:"ہنگامی صورتحال میں استعمال کے لیے ضروری طبی معلومات۔",thanks:"آپ کی مدد کا شکریہ۔"},
+hi:{title:"आपातकालीन कार्ड",subtitle:"आपात स्थिति में",blood:"रक्त",allergies:"एलर्जी",meds:"दवाइयाँ",conditions:"बीमारियाँ",contact:"आपातकालीन संपर्क",scan:"विवरण के लिए स्कैन करें",note:"नोट",callFirst:"यदि मैं बोल न सकूँ, तो कृपया कॉल करें",keep:"बटुए, बैग या फ़ोन केस में रखें · दवाइयाँ बदलने पर अपडेट करें",dob:"जन्म",help:"आपात स्थिति में उपयोग के लिए आवश्यक चिकित्सा जानकारी।",thanks:"आपकी सहायता के लिए धन्यवाद।"},
+ta:{title:"அவசர அட்டை",subtitle:"அவசர நிலையில்",blood:"இரத்தம்",allergies:"ஒவ்வாமைகள்",meds:"மருந்துகள்",conditions:"நோய்கள்",contact:"அவசர தொடர்பு",scan:"விவரங்களுக்கு ஸ்கேன் செய்யவும்",note:"குறிப்பு",callFirst:"என்னால் பேச முடியாவிட்டால், தயவுசெய்து அழைக்கவும்",keep:"பணப்பை, பை அல்லது தொலைபேசி உறையில் வைக்கவும் · மருந்துகள் மாறும்போது புதுப்பிக்கவும்",dob:"பிறப்பு",help:"அவசர நிலையில் பயன்படுத்த அத்தியாவசிய மருத்துவ தகவல்.",thanks:"உங்கள் உதவிக்கு நன்றி."},
+te:{title:"అత్యవసర కార్డు",subtitle:"అత్యవసర పరిస్థితిలో",blood:"రక్తం",allergies:"అలెర్జీలు",meds:"మందులు",conditions:"వ్యాధులు",contact:"అత్యవసర సంప్రదింపు",scan:"వివరాల కోసం స్కాన్ చేయండి",note:"గమనిక",callFirst:"నేను మాట్లాడలేకపోతే, దయచేసి కాల్ చేయండి",keep:"వాలెట్, బ్యాగ్ లేదా ఫోన్ కేసులో ఉంచండి · మందులు మారినప్పుడు నవీకరించండి",dob:"పుట్టిన తేదీ",help:"అత్యవసర పరిస్థితిలో ఉపయోగించడానికి అవసరమైన వైద్య సమాచారం.",thanks:"మీ సహాయానికి ధన్యవాదాలు."},
+mr:{title:"आपत्कालीन कार्ड",subtitle:"आपत्कालीन परिस्थितीत",blood:"रक्त",allergies:"अ‍ॅलर्जी",meds:"औषधे",conditions:"आजार",contact:"आपत्कालीन संपर्क",scan:"तपशीलासाठी स्कॅन करा",note:"टीप",callFirst:"मी बोलू शकत नसल्यास, कृपया कॉल करा",keep:"पाकीट, बॅग किंवा फोन केसमध्ये ठेवा · औषधे बदलल्यावर अपडेट करा",dob:"जन्म",help:"आपत्कालीन परिस्थितीत वापरण्यासाठी आवश्यक वैद्यकीय माहिती.",thanks:"तुमच्या मदतीबद्दल धन्यवाद."},
+gu:{title:"કટોકટી કાર્ડ",subtitle:"કટોકટીની સ્થિતિમાં",blood:"લોહી",allergies:"એલર્જી",meds:"દવાઓ",conditions:"બીમારીઓ",contact:"કટોકટી સંપર્ક",scan:"વિગતો માટે સ્કેન કરો",note:"નોંધ",callFirst:"જો હું બોલી ન શકું, તો કૃપા કરીને કૉલ કરો",keep:"પાકીટ, બેગ અથવા ફોન કેસમાં રાખો · દવાઓ બદલાય ત્યારે અપડેટ કરો",dob:"જન્મ",help:"કટોકટીમાં ઉપયોગ માટે આવશ્યક તબીબી માહિતી.",thanks:"તમારી સહાય બદલ આભાર."},
+pa:{title:"ਐਮਰਜੈਂਸੀ ਕਾਰਡ",subtitle:"ਐਮਰਜੈਂਸੀ ਵਿੱਚ",blood:"ਖੂਨ",allergies:"ਐਲਰਜੀ",meds:"ਦਵਾਈਆਂ",conditions:"ਬਿਮਾਰੀਆਂ",contact:"ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ",scan:"ਵੇਰਵਿਆਂ ਲਈ ਸਕੈਨ ਕਰੋ",note:"ਨੋਟ",callFirst:"ਜੇ ਮੈਂ ਬੋਲ ਨਹੀਂ ਸਕਦਾ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਕਾਲ ਕਰੋ",keep:"ਬਟੂਏ, ਬੈਗ ਜਾਂ ਫ਼ੋਨ ਕੇਸ ਵਿੱਚ ਰੱਖੋ · ਦਵਾਈਆਂ ਬਦਲਣ 'ਤੇ ਅੱਪਡੇਟ ਕਰੋ",dob:"ਜਨਮ",help:"ਐਮਰਜੈਂਸੀ ਵਿੱਚ ਵਰਤੋਂ ਲਈ ਜ਼ਰੂਰੀ ਮੈਡੀਕਲ ਜਾਣਕਾਰੀ।",thanks:"ਤੁਹਾਡੀ ਸਹਾਇਤਾ ਲਈ ਧੰਨਵਾਦ।"},
+ne:{title:"आपतकालीन कार्ड",subtitle:"आपतकालीन अवस्थामा",blood:"रगत",allergies:"एलर्जीहरू",meds:"औषधिहरू",conditions:"रोगहरू",contact:"आपतकालीन सम्पर्क",scan:"विवरणका लागि स्क्यान गर्नुहोस्",note:"नोट",callFirst:"यदि म बोल्न सक्दिनँ भने, कृपया कल गर्नुहोस्",keep:"वालेट, झोला वा फोन केसमा राख्नुहोस् · औषधि बदलिएमा अपडेट गर्नुहोस्",dob:"जन्म",help:"आपतकालीन अवस्थामा प्रयोगका लागि आवश्यक चिकित्सा जानकारी।",thanks:"तपाईंको सहयोगको लागि धन्यवाद।"},
+zh:{title:"急救卡",subtitle:"紧急情况下",blood:"血型",allergies:"过敏",meds:"药物",conditions:"疾病",contact:"紧急联系人",scan:"扫描查看详情",note:"备注",callFirst:"如果我无法说话，请致电",keep:"请放在钱包、包或手机壳中 · 药物变更时更新",dob:"出生",help:"供紧急情况使用的基本医疗信息。",thanks:"感谢您的帮助。"},
+ja:{title:"緊急カード",subtitle:"緊急の場合",blood:"血液",allergies:"アレルギー",meds:"薬",conditions:"病状",contact:"緊急連絡先",scan:"詳細はスキャンしてください",note:"メモ",callFirst:"話せない場合は、電話してください",keep:"財布、バッグ、または電話ケースに入れてください · 薬が変わったら更新してください",dob:"生年月日",help:"緊急時に使用するための基本的な医療情報。",thanks:"ご協力ありがとうございます。"},
+ko:{title:"응급 카드",subtitle:"응급 상황 시",blood:"혈액",allergies:"알레르기",meds:"약물",conditions:"질환",contact:"비상 연락처",scan:"자세한 내용은 스캔하세요",note:"메모",callFirst:"말할 수 없는 경우 전화해 주세요",keep:"지갑, 가방 또는 휴대폰 케이스에 보관하세요 · 약물이 바뀌면 업데이트하세요",dob:"생년월일",help:"응급 상황에서 사용하기 위한 필수 의료 정보입니다.",thanks:"도와주셔서 감사합니다."},
+th:{title:"บัตรฉุกเฉิน",subtitle:"ในกรณีฉุกเฉิน",blood:"เลือด",allergies:"ภูมิแพ้",meds:"ยา",conditions:"โรคประจำตัว",contact:"ผู้ติดต่อฉุกเฉิน",scan:"สแกนเพื่อดูรายละเอียด",note:"หมายเหตุ",callFirst:"หากฉันพูดไม่ได้ กรุณาโทรหา",keep:"เก็บในกระเป๋าสตางค์ กระเป๋า หรือเคสโทรศัพท์ · อัปเดตเมื่อยาเปลี่ยน",dob:"เกิด",help:"ข้อมูลทางการแพทย์ที่จำเป็นสำหรับใช้ในกรณีฉุกเฉิน",thanks:"ขอบคุณสำหรับความช่วยเหลือของคุณ"},
+vi:{title:"Thẻ Khẩn Cấp",subtitle:"Trong trường hợp khẩn cấp",blood:"Máu",allergies:"Dị ứng",meds:"Thuốc",conditions:"Bệnh lý",contact:"Liên hệ khẩn cấp",scan:"Quét để xem chi tiết",note:"Ghi chú",callFirst:"Nếu tôi không thể nói, vui lòng gọi",keep:"Giữ trong ví, túi hoặc ốp điện thoại · Cập nhật khi thuốc thay đổi",dob:"Sinh",help:"Thông tin y tế thiết yếu để sử dụng trong trường hợp khẩn cấp.",thanks:"Cảm ơn sự giúp đỡ của bạn."},
+id:{title:"Kartu Darurat",subtitle:"Dalam keadaan darurat",blood:"Darah",allergies:"Alergi",meds:"Obat-obatan",conditions:"Kondisi",contact:"Kontak darurat",scan:"Pindai untuk detail",note:"Catatan",callFirst:"Jika saya tidak bisa berbicara, silakan hubungi",keep:"Simpan di dompet, tas, atau casing ponsel · Perbarui saat obat berubah",dob:"Lahir",help:"Informasi medis penting untuk digunakan dalam keadaan darurat.",thanks:"Terima kasih atas bantuan Anda."},
+ms:{title:"Kad Kecemasan",subtitle:"Dalam kecemasan",blood:"Darah",allergies:"Alahan",meds:"Ubat-ubatan",conditions:"Keadaan",contact:"Kenalan kecemasan",scan:"Imbas untuk butiran",note:"Nota",callFirst:"Jika saya tidak boleh bercakap, sila hubungi",keep:"Simpan dalam dompet, beg atau sarung telefon · Kemas kini apabila ubat berubah",dob:"Lahir",help:"Maklumat perubatan penting untuk digunakan dalam kecemasan.",thanks:"Terima kasih atas bantuan anda."},
+tl:{title:"Card para sa Emergency",subtitle:"Sa oras ng emergency",blood:"Dugo",allergies:"Mga Allergy",meds:"Mga Gamot",conditions:"Mga Kondisyon",contact:"Kontak sa Emergency",scan:"I-scan para sa mga detalye",note:"Tala",callFirst:"Kung hindi ako makapagsalita, pakitawagan si",keep:"Itago sa pitaka, bag o phone case · I-update kapag nagbago ang mga gamot",dob:"Kapanganakan",help:"Mahahalagang impormasyong medikal para sa emergency.",thanks:"Salamat sa inyong tulong."},
+sw:{title:"Kadi ya Dharura",subtitle:"Katika dharura",blood:"Damu",allergies:"Mzio",meds:"Dawa",conditions:"Magonjwa",contact:"Mawasiliano ya dharura",scan:"Changanua kwa maelezo",note:"Kumbuka",callFirst:"Ikiwa siwezi kuzungumza, tafadhali piga simu kwa",keep:"Weka kwenye mkoba, begi au kipochi cha simu · Sasisha dawa zinapobadilika",dob:"Kuzaliwa",help:"Taarifa muhimu za matibabu kwa ajili ya dharura.",thanks:"Asante kwa msaada wako."},
+am:{title:"የአደጋ ካርድ",subtitle:"በአደጋ ጊዜ",blood:"ደም",allergies:"አለርጂዎች",meds:"መድኃኒቶች",conditions:"በሽታዎች",contact:"የአደጋ ጊዜ ግንኙነት",scan:"ለዝርዝሮች ይቃኙ",note:"ማስታወሻ",callFirst:"መናገር ካልቻልኩ እባክዎ ይደውሉ",keep:"በኪስ ቦርሳ፣ በሻንጣ ወይም በስልክ ከረጢት ውስጥ ያስቀምጡ · መድኃኒቶች ሲቀየሩ ያዘምኑ",dob:"ትውልድ",help:"ለአደጋ ጊዜ አስፈላጊ የሕክምና መረጃ።",thanks:"ስለ እርዳታዎ አመሰግናለሁ።"},
+ha:{title:"Katin Gaggawa",subtitle:"A cikin gaggawa",blood:"Jini",allergies:"Allergy",meds:"Magunguna",conditions:"Cututtuka",contact:"Tuntuɓar gaggawa",scan:"Duba don cikakkun bayanai",note:"Bayanin kula",callFirst:"Idan ba zan iya magana ba, don Allah kira",keep:"Ajiye a cikin walat, jaka ko akwatin waya · Sabunta idan magunguna sun canza",dob:"Haihuwa",help:"Muhimman bayanan likita don amfani a cikin gaggawa.",thanks:"Na gode da taimakon ku."},
+yo:{title:"Káàdì Pàjàwìrì",subtitle:"Nígbà pàjàwìrì",blood:"Ẹ̀jẹ̀",allergies:"Àwọn àlẹ́jì",meds:"Àwọn òògùn",conditions:"Àwọn àìsàn",contact:"Olùbásọ̀rọ̀ pàjàwìrì",scan:"Ṣàyẹ̀wò fún àlàyé",note:"Àkíyèsí",callFirst:"Tí n kò bá lè sọ̀rọ̀, jọ̀wọ́ pe",keep:"Tọ́jú sínú àpò owó, àpò tàbí àpò fóònù · Ṣe àtúnṣe nígbà tí òògùn bá yípadà",dob:"Ìbí",help:"Ìsọfúnni ìṣègùn pàtàkì fún pàjàwìrì.",thanks:"Ẹ ṣé fún ìrànlọ́wọ́ yín."},
+ig:{title:"Kaadị Mberede",subtitle:"Na mberede",blood:"Ọbara",allergies:"Ihe nfụkasị",meds:"Ọgwụ",conditions:"Ọnọdụ ahụike",contact:"Onye kọntaktị mberede",scan:"Nyochaa maka nkọwa",note:"Rịba ama",callFirst:"Ọ bụrụ na enweghị m ike ikwu okwu, biko kpọọ",keep:"Debe n'akpa ego, akpa ma ọ bụ mkpuchi ekwentị · Melite mgbe ọgwụ gbanwere",dob:"Amụrụ",help:"Ozi ahụike dị mkpa maka mberede.",thanks:"Daalụ maka enyemaka gị."},
+zu:{title:"Ikhadi Lesimo Esiphuthumayo",subtitle:"Esimeni esiphuthumayo",blood:"Igazi",allergies:"Ukungezwani",meds:"Imithi",conditions:"Izimo",contact:"Oxhumana naye ophuthumayo",scan:"Skena ukuthola imininingwane",note:"Qaphela",callFirst:"Uma ngingakwazi ukukhuluma, ngicela ushayele",keep:"Gcina esikhwameni, esikhwameni noma kukesi yefoni · Buyekeza uma imithi ishintsha",dob:"Uzalwe",help:"Ulwazi lwezokwelapha olubalulekile lwesimo esiphuthumayo.",thanks:"Ngiyabonga ngosizo lwakho."},
+af:{title:"Noodkaart",subtitle:"In 'n noodgeval",blood:"Bloed",allergies:"Allergieë",meds:"Medisyne",conditions:"Toestande",contact:"Noodkontak",scan:"Skandeer vir besonderhede",note:"Nota",callFirst:"As ek nie kan praat nie, skakel asseblief",keep:"Bewaar in beursie, sak of foonomhulsel · Werk by wanneer medisyne verander",dob:"Geb.",help:"Essensiële mediese inligting vir 'n noodgeval.",thanks:"Dankie vir u hulp."},
+kk:{title:"Төтенше жағдай картасы",subtitle:"Төтенше жағдайда",blood:"Қан",allergies:"Аллергиялар",meds:"Дәрі-дәрмектер",conditions:"Аурулар",contact:"Төтенше байланыс",scan:"Толығырақ сканерлеңіз",note:"Ескертпе",callFirst:"Сөйлей алмасам, қоңырау шалыңыз",keep:"Әмиянда, сөмкеде немесе телефон қабында сақтаңыз · Дәрілер өзгергенде жаңартыңыз",dob:"Туған",help:"Төтенше жағдайда қолдануға арналған негізгі медициналық ақпарат.",thanks:"Көмегіңіз үшін рахмет."},
+uz:{title:"Favqulodda karta",subtitle:"Favqulodda holatda",blood:"Qon",allergies:"Allergiyalar",meds:"Dorilar",conditions:"Kasalliklar",contact:"Favqulodda aloqa",scan:"Tafsilotlar uchun skanerlang",note:"Eslatma",callFirst:"Agar gapira olmasam, iltimos qo'ng'iroq qiling",keep:"Hamyon, sumka yoki telefon g'ilofida saqlang · Dorilar o'zgarganda yangilang",dob:"Tug'ilgan",help:"Favqulodda holatda foydalanish uchun muhim tibbiy ma'lumotlar.",thanks:"Yordamingiz uchun rahmat."},
+ka:{title:"საგანგებო ბარათი",subtitle:"საგანგებო სიტუაციაში",blood:"სისხლი",allergies:"ალერგიები",meds:"მედიკამენტები",conditions:"დაავადებები",contact:"საგანგებო კონტაქტი",scan:"დაასკანერეთ დეტალებისთვის",note:"შენიშვნა",callFirst:"თუ ვერ ვლაპარაკობ, გთხოვთ დარეკოთ",keep:"შეინახეთ საფულეში, ჩანთაში ან ტელეფონის ქეისში · განაახლეთ მედიკამენტების შეცვლისას",dob:"დაბ.",help:"აუცილებელი სამედიცინო ინფორმაცია საგანგებო სიტუაციისთვის.",thanks:"გმადლობთ დახმარებისთვის."},
+hy:{title:"Արտակարգ իրավիճակի քարտ",subtitle:"Արտակարգ իրավիճակի դեպքում",blood:"Արյուն",allergies:"Ալերգիաներ",meds:"Դեղամիջոցներ",conditions:"Հիվանդություններ",contact:"Արտակարգ կապ",scan:"Սքանավորեք մանրամասների համար",note:"Նշում",callFirst:"Եթե չեմ կարող խոսել, խնդրում եմ զանգահարել",keep:"Պահեք դրամապանակում, պայուսակում կամ հեռախոսի պատյանում · Թարմացրեք, երբ դեղերը փոխվում են",dob:"Ծնվ.",help:"Անհրաժեշտ բժշկական տեղեկատվություն արտակարգ իրավիճակների համար։",thanks:"Շնորհակալություն ձեր օգնության համար։"},
+my:{title:"အရေးပေါ်ကတ်",subtitle:"အရေးပေါ်အခြေအနေတွင်",blood:"သွေး",allergies:"ဓာတ်မတည့်မှုများ",meds:"ဆေးဝါးများ",conditions:"ရောဂါအခြေအနေများ",contact:"အရေးပေါ်ဆက်သွယ်ရန်",scan:"အသေးစိတ်အတွက် စကင်ဖတ်ပါ",note:"မှတ်ချက်",callFirst:"ကျွန်ုပ် စကားမပြောနိုင်ပါက ကျေးဇူးပြု၍ ဖုန်းခေါ်ပါ",keep:"ပိုက်ဆံအိတ်၊ အိတ် သို့မဟုတ် ဖုန်းအိတ်တွင် ထားပါ · ဆေးများ ပြောင်းလဲသောအခါ အပ်ဒိတ်လုပ်ပါ",dob:"မွေးနေ့",help:"အရေးပေါ်အခြေအနေတွင် အသုံးပြုရန် မရှိမဖြစ် ဆေးဘက်ဆိုင်ရာ အချက်အလက်များ။",thanks:"သင့်အကူအညီအတွက် ကျေးဇူးတင်ပါသည်။"},
+km:{title:"កាតសង្គ្រោះបន្ទាន់",subtitle:"ក្នុងករណីបន្ទាន់",blood:"ឈាម",allergies:"អាឡែរហ្សី",meds:"ថ្នាំ",conditions:"ជំងឺ",contact:"ទំនាក់ទំនងបន្ទាន់",scan:"ស្កេនសម្រាប់ព័ត៌មានលម្អិត",note:"ចំណាំ",callFirst:"ប្រសិនបើខ្ញុំមិនអាចនិយាយបាន សូមទូរស័ព្ទទៅ",keep:"ទុកក្នុងកាបូបលុយ កាបូប ឬស្រោមទូរស័ព្ទ · អាប់ដេតនៅពេលថ្នាំផ្លាស់ប្តូរ",dob:"កើត",help:"ព័ត៌មានវេជ្ជសាស្ត្រសំខាន់ៗសម្រាប់ប្រើក្នុងករណីបន្ទាន់។",thanks:"សូមអរគុណសម្រាប់ជំនួយរបស់អ្នក។"},
+si:{title:"හදිසි කාඩ්පත",subtitle:"හදිසි අවස්ථාවකදී",blood:"රුධිරය",allergies:"අසාත්මිකතා",meds:"ඖෂධ",conditions:"රෝග තත්ත්වයන්",contact:"හදිසි සම්බන්ධතාව",scan:"විස්තර සඳහා ස්කෑන් කරන්න",note:"සටහන",callFirst:"මට කතා කළ නොහැකි නම්, කරුණාකර අමතන්න",keep:"මුදල් පසුම්බිය, බෑගය හෝ දුරකථන ආවරණයේ තබන්න · ඖෂධ වෙනස් වූ විට යාවත්කාලීන කරන්න",dob:"උපත",help:"හදිසි අවස්ථාවකදී භාවිතය සඳහා අත්‍යවශ්‍ය වෛද්‍ය තොරතුරු.",thanks:"ඔබේ සහායට ස්තූතියි."},
+mn:{title:"Яаралтай тусламжийн карт",subtitle:"Яаралтай үед",blood:"Цус",allergies:"Харшил",meds:"Эм",conditions:"Өвчин",contact:"Яаралтай холбоо барих",scan:"Дэлгэрэнгүйг сканнердана уу",note:"Тэмдэглэл",callFirst:"Хэрэв би ярьж чадахгүй бол залгана уу",keep:"Түрийвч, цүнх эсвэл утасны гэрт хадгална уу · Эм солигдвол шинэчилнэ үү",dob:"Төрсөн",help:"Яаралтай үед хэрэглэх чухал эмнэлгийн мэдээлэл.",thanks:"Тусламжийн тань төлөө баярлалаа."}
+};
+var EXTRA_D2 = {
+pt:{call:"Ligar",contacts:"Contatos de emergência — toque para ligar",maker:"Faça seu próprio cartão de emergência",foot:"Estes dados vieram do próprio código QR — nada foi buscado online."},
+it:{call:"Chiama",contacts:"Contatti di emergenza — tocca per chiamare",maker:"Crea la tua carta di emergenza",foot:"Questi dati provengono dal codice QR stesso — nulla è stato cercato online."},
+ru:{call:"Позвонить",contacts:"Экстренные контакты — нажмите, чтобы позвонить",maker:"Создать свою карту экстренной помощи",foot:"Эти данные получены из самого QR-кода — ничего не искалось в интернете."},
+ar:{call:"اتصال",contacts:"جهات اتصال الطوارئ — اضغط للاتصال",maker:"اصنع بطاقة الطوارئ الخاصة بك",foot:"جاءت هذه البيانات من رمز QR نفسه — لم يتم البحث عن أي شيء عبر الإنترنت."},
+hi:{call:"कॉल करें",contacts:"आपातकालीन संपर्क — कॉल करने के लिए टैप करें",maker:"अपना आपातकालीन कार्ड बनाएं",foot:"यह जानकारी QR कोड से ही आई है — ऑनलाइन कुछ नहीं खोजा गया।"},
+zh:{call:"拨打",contacts:"紧急联系人 — 点击拨打",maker:"制作您自己的急救卡",foot:"这些信息来自二维码本身 — 未在网上查询任何内容。"},
+ja:{call:"電話",contacts:"緊急連絡先 — タップして電話",maker:"自分の緊急カードを作る",foot:"この情報はQRコード自体から取得したものです — オンラインで検索したものではありません。"}
+};
+</script>
+<script>
+(function(){
+  var I = {
+    en:{title:"Emergency Card",subtitle:"In case of emergency",blood:"Blood",allergies:"Allergies",meds:"Medications",conditions:"Conditions",contact:"Emergency contact",scan:"Scan to read my details",note:"Note",callFirst:"If I cannot speak, please call",keep:"Keep in a wallet, bag or phone case · Update when medicines change",dob:"DOB",help:"Essential medical information for use in an emergency.",thanks:"Thank you for your assistance."},
+    es:{title:"Tarjeta de emergencia",subtitle:"En caso de emergencia",blood:"Sangre",allergies:"Alergias",meds:"Medicamentos",conditions:"Condiciones",contact:"Contacto de emergencia",scan:"Escanee para ver los detalles",note:"Nota",callFirst:"Si no puedo hablar, llame a",keep:"Llévela en la cartera, el bolso o la funda del teléfono · Actualícela si cambian los medicamentos",dob:"Nacimiento",help:"Información médica esencial para casos de emergencia.",thanks:"Gracias por su asistencia."},
+    fr:{title:"Carte d'urgence",subtitle:"En cas d'urgence",blood:"Sang",allergies:"Allergies",meds:"Médicaments",conditions:"Affections",contact:"Contact d'urgence",scan:"Scannez pour les détails",note:"Note",callFirst:"Si je ne peux pas parler, appelez",keep:"À garder dans le portefeuille, le sac ou la coque du téléphone · À mettre à jour si les médicaments changent",dob:"Né(e) le",help:"Informations médicales essentielles à utiliser en cas d'urgence.",thanks:"Merci pour votre assistance."},
+    de:{title:"Notfallkarte",subtitle:"Im Notfall",blood:"Blutgruppe",allergies:"Allergien",meds:"Medikamente",conditions:"Erkrankungen",contact:"Notfallkontakt",scan:"Für Details scannen",note:"Hinweis",callFirst:"Wenn ich nicht sprechen kann, bitte anrufen",keep:"In Geldbörse, Tasche oder Handyhülle aufbewahren · Bei Medikamentenwechsel aktualisieren",dob:"Geb.",help:"Wichtige medizinische Informationen für den Notfall.",thanks:"Vielen Dank für Ihre Hilfe."},
+    bn:{title:"জরুরি কার্ড",subtitle:"জরুরি অবস্থার জন্য",blood:"রক্তের গ্রুপ",allergies:"অ্যালার্জি",meds:"ওষুধ",conditions:"শারীরিক অবস্থা",contact:"জরুরি যোগাযোগ",scan:"বিস্তারিত জানতে স্ক্যান করুন",note:"নোট",callFirst:"আমি কথা বলতে না পারলে কল করুন",keep:"মানিব্যাগ, ব্যাগ বা ফোনের কভারে রাখুন · ওষুধ বদলালে আপডেট করুন",dob:"জন্ম",help:"জরুরি অবস্থায় ব্যবহারের জন্য প্রয়োজনীয় চিকিৎসা তথ্য।",thanks:"আপনার সহায়তার জন্য ধন্যবাদ।"}
+  };
+  var D2 = {
+    en:{call:"Call",contacts:"Emergency contacts — tap to call",maker:"Make your own emergency card",foot:"These details came from the QR code itself — nothing was fetched or looked up."},
+    es:{call:"Llamar",contacts:"Contactos de emergencia — toque para llamar",maker:"Haga su propia tarjeta de emergencia",foot:"Estos datos provienen del propio código QR — no se buscó nada en línea."},
+    fr:{call:"Appeler",contacts:"Contacts d'urgence — touchez pour appeler",maker:"Créez votre propre carte d'urgence",foot:"Ces informations proviennent du code QR lui-même — rien n'a été recherché en ligne."},
+    de:{call:"Anrufen",contacts:"Notfallkontakte — zum Anrufen antippen",maker:"Eigene Notfallkarte erstellen",foot:"Diese Angaben stammen aus dem QR-Code selbst — es wurde nichts online abgerufen."},
+    bn:{call:"কল করুন",contacts:"জরুরি যোগাযোগ — কল করতে ট্যাপ করুন",maker:"নিজের জরুরি কার্ড তৈরি করুন",foot:"এই তথ্যগুলো QR কোড থেকেই এসেছে — অনলাইনে কিছু খোঁজা হয়নি।"}
+  };
+  if (typeof EXTRA_I !== "undefined") { for (var _k in EXTRA_I) I[_k] = EXTRA_I[_k]; }
+  if (typeof EXTRA_D2 !== "undefined") { for (var _k2 in EXTRA_D2) D2[_k2] = EXTRA_D2[_k2]; }
+  var lang = "en";
+  /* Card designs — the CSS above holds the same palettes as variables for the
+     on-screen card; this table drives the picker swatches and the PNG render. */
+  var DESIGNS = {
+    classic:{name:"Classic Red",layout:"band",head:"#b30d24",headInk:"#ffffff",accent:"#b30d24",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#fdf3d0",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#b30d24",bloodBg:"#ffffff",bloodInk:"#b30d24",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    navy:{name:"Navy",layout:"band",head:"#12355b",headInk:"#ffffff",accent:"#12355b",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#e2ebf6",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#12355b",bloodBg:"#ffffff",bloodInk:"#12355b",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    teal:{name:"Teal Clinic",layout:"band",head:"#0b6b62",headInk:"#ffffff",accent:"#0b6b62",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#dcf0ec",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#0b6b62",bloodBg:"#ffffff",bloodInk:"#0b6b62",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    charcoal:{name:"Charcoal Night",layout:"dark",head:"#101010",headInk:"#ffffff",accent:"#e8e7e0",cardBg:"#1e1e1b",ink:"#f0efe9",muted:"#a8a79d",allergyBg:"#3a3a34",allergyInk:"#f5f4ee",plusBg:"#f0efe9",plusInk:"#141310",bloodBg:"#f0efe9",bloodInk:"#141310",bloodSub:"#6b6b62",foot:"#55554e"},
+    hivis:{name:"Hi-Vis Yellow",layout:"band",head:"#f2c200",headInk:"#141310",accent:"#141310",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#f2c200",allergyInk:"#141310",plusBg:"#141310",plusInk:"#f2c200",bloodBg:"#141310",bloodInk:"#f2c200",bloodSub:"#a89e7a",foot:"#c9c9bf"},
+    forest:{name:"Forest",layout:"band",head:"#1f5130",headInk:"#ffffff",accent:"#1f5130",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#e4efe0",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#1f5130",bloodBg:"#ffffff",bloodInk:"#1f5130",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    burgundy:{name:"Burgundy",layout:"band",head:"#5f1429",headInk:"#ffffff",accent:"#5f1429",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#f5e2e8",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#5f1429",bloodBg:"#ffffff",bloodInk:"#5f1429",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    ocean:{name:"Ocean Rule",layout:"stripe",head:"#0e5a8a",headInk:"#ffffff",accent:"#0e5a8a",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#dfedf6",allergyInk:"#141310",plusBg:"#0e5a8a",plusInk:"#ffffff",bloodBg:"#0e5a8a",bloodInk:"#ffffff",bloodSub:"#bcd6e6",foot:"#c9c9bf"},
+    copper:{name:"Copper",layout:"band",head:"#9a4a12",headInk:"#ffffff",accent:"#9a4a12",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#fbeed8",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#9a4a12",bloodBg:"#ffffff",bloodInk:"#9a4a12",bloodSub:"#6b6b62",foot:"#c9c9bf"},
+    slate:{name:"Slate Rule",layout:"stripe",head:"#3e4c5e",headInk:"#ffffff",accent:"#3e4c5e",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#e6eaef",allergyInk:"#141310",plusBg:"#3e4c5e",plusInk:"#ffffff",bloodBg:"#3e4c5e",bloodInk:"#ffffff",bloodSub:"#c3ccd6",foot:"#c9c9bf"},
+    cobalt:{name:"Cobalt",layout:"band",head:"#2743a6",headInk:"#ffffff",accent:"#2743a6",cardBg:"#ffffff",ink:"#141310",muted:"#5c5c55",allergyBg:"#e3e8fa",allergyInk:"#141310",plusBg:"#ffffff",plusInk:"#2743a6",bloodBg:"#ffffff",bloodInk:"#2743a6",bloodSub:"#6b6b62",foot:"#c9c9bf"}
+  };
+  var design = "classic";
+  var ids = ["fName","fDob","fBlood","fAllergy","fMeds","fCond","c1Name","c1Rel","c1Phone","c2Name","c2Rel","c2Phone","fNote"];
+  function val(id){ var el=document.getElementById(id); return el ? el.value.trim() : ""; }
+  function esc(s){ return s.replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+  function setHtml(id, html){ document.getElementById(id).innerHTML = html; }
+  function ph(text){ return '<span class="placeholder">'+esc(text)+'</span>'; }
+
+  /* The QR holds this text itself — it is not a link and points nowhere,
+     so any scanner displays it with no signal and no page to load. */
+  var lastQRText = "", lastEC = "";
+  function qrText(){
+    var t = I[lang], lines = [];
+    lines.push(t.title.toUpperCase() + " — " + t.subtitle.toUpperCase());
+    lines.push(t.help);
+    lines.push("");
+    lines.push((val("fName") || "—").toUpperCase());
+    if(val("fAllergy")) lines.push("", "⚠ " + t.allergies.toUpperCase() + ": " + val("fAllergy"));
+    var vitals = [];
+    if(val("fBlood")) vitals.push(t.blood + ": " + val("fBlood"));
+    if(val("fDob")) vitals.push(t.dob + ": " + val("fDob"));
+    if(vitals.length) lines.push("", vitals.join("   ·   "));
+    if(val("fMeds")) lines.push("", t.meds.toUpperCase(), val("fMeds"));
+    if(val("fCond")) lines.push("", t.conditions.toUpperCase(), val("fCond"));
+    var contacts = [];
+    [["c1Name","c1Rel","c1Phone"],["c2Name","c2Rel","c2Phone"]].forEach(function(c){
+      var n = val(c[0]), r = val(c[1]), p = val(c[2]);
+      if(!n && !p) return;
+      contacts.push((contacts.length + 1) + ".  " + (n || "—") + (r ? " (" + r + ")" : "") + (p ? " — " + p : ""));
+    });
+    if(contacts.length) lines.push("", t.callFirst.toUpperCase() + ":", contacts.join("\n"));
+    if(val("fNote")) lines.push("", t.note.toUpperCase(), val("fNote"));
+    lines.push("", t.thanks);
+    return lines.join("\n");
+  }
+  function updateQrPreview(){
+    var pre = document.getElementById("qrTextPreview");
+    if(pre) pre.textContent = lastQRText;
+    var bytes = new TextEncoder().encode(lastQRText).length;
+    var meta = document.getElementById("qrMeta");
+    if(meta) meta.textContent = bytes + " bytes" + (lastQR ? " · correction level " + lastEC : "");
+    var warn = document.getElementById("qrWarn");
+    if(warn){
+      if(!lastQR){
+        warn.style.display = "";
+        warn.textContent = "Too much text for one QR code — shorten the longest fields (medicines, conditions or the note) and the code will come back.";
+      } else if(bytes > 1400){
+        warn.style.display = "";
+        warn.textContent = "This is a dense QR — a lot of text in a small code. Print it at full wallet size and test-scan the print before you carry it.";
+      } else {
+        warn.style.display = "none";
+      }
+    }
+  }
+  function b64urlDecode(s){
+    s = s.replace(/-/g,"+").replace(/_/g,"/");
+    while(s.length % 4) s += "=";
+    var bin = atob(s), bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  var lastQR = null;
+  if (typeof qrcode !== "undefined" && qrcode.stringToBytesFuncs && qrcode.stringToBytesFuncs["UTF-8"]) {
+    qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];
+  }
+  function makeQR(text){
+    /* Strongest error correction first, so a worn or partly damaged print
+       still scans; step down only when the text needs the room. */
+    var types=[0,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,40];
+    var levels=["Q","M","L"];
+    for(var li=0;li<levels.length;li++){
+      for(var i=0;i<types.length;i++){
+        try{ var q=qrcode(types[i],levels[li]); q.addData(text); q.make(); lastEC = levels[li]; return q; }catch(e){}
+      }
+    }
+    lastEC = "";
+    return null;
+  }
+  function paintQR(canvas, q, size){
+    var n=q.getModuleCount(), quiet=2, cell=Math.max(2, Math.floor(size/(n+quiet*2)));
+    canvas.width=(n+quiet*2)*cell; canvas.height=canvas.width;
+    var ctx=canvas.getContext("2d");
+    ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="#141310";
+    for(var r=0;r<n;r++){ for(var c=0;c<n;c++){ if(q.isDark(r,c)) ctx.fillRect((c+quiet)*cell,(r+quiet)*cell,cell,cell); } }
+  }
+  function drawQR(){
+    lastQRText = qrText();
+    lastQR = makeQR(lastQRText);
+    updateQrPreview();
+    ["qrFront","qrBack"].forEach(function(id){
+      var box=document.getElementById(id); box.innerHTML="";
+      if(!lastQR){ box.innerHTML='<span style="font-size:11px;color:#888">Too much text for one QR — shorten a field</span>'; return; }
+      var cv=document.createElement("canvas");
+      paintQR(cv, lastQR, 232);
+      box.appendChild(cv);
+    });
+  }
+  function render(){
+    var t = I[lang];
+    var _meta = (typeof LANG_META !== "undefined") ? langMeta(lang) : null;
+    var _area = document.getElementById("captureArea");
+    if (_area){ _area.setAttribute("dir", _meta && _meta.rtl ? "rtl" : "ltr"); _area.setAttribute("lang", lang); }
+    document.querySelectorAll("[data-i]").forEach(function(el){ var k=el.getAttribute("data-i"); if(t[k]) el.textContent=t[k]; });
+    var blood = val("fBlood") || "—";
+    document.getElementById("pBlood").textContent = blood;
+    document.getElementById("pBlood2").textContent = blood;
+    setHtml("pName", val("fName") ? esc(val("fName")) : ph("Your name"));
+    document.getElementById("pDob").textContent = val("fDob") ? (t.dob+" · "+val("fDob")) : "";
+    setHtml("pAllergy", val("fAllergy") ? esc(val("fAllergy")) : ph("—"));
+    setHtml("pMeds", val("fMeds") ? esc(val("fMeds")) : ph("—"));
+    var cond = val("fCond");
+    document.getElementById("condBlock").style.display = cond ? "" : "none";
+    if(cond) document.getElementById("pCond").textContent = cond;
+    setHtml("pC1Name", val("c1Name") ? esc(val("c1Name")) : ph("Contact 1"));
+    setHtml("pC2Name", val("c2Name") ? esc(val("c2Name")) : ph("Contact 2"));
+    document.getElementById("pC1Rel").textContent = val("c1Rel");
+    document.getElementById("pC2Rel").textContent = val("c2Rel");
+    document.getElementById("pC1Phone").textContent = val("c1Phone");
+    document.getElementById("pC2Phone").textContent = val("c2Phone");
+    document.getElementById("pFor").textContent = t.subtitle;
+    setHtml("pNote", val("fNote") ? esc(val("fNote")) : ph("Anything else a helper should know, in one or two lines."));
+    var first = [val("c1Name"), val("c1Phone")].filter(Boolean).join(" · ");
+    document.getElementById("pCallFirst").textContent = first || "—";
+    drawQR();
+  }
+  ids.forEach(function(id){ var el=document.getElementById(id); el.addEventListener("input",render); el.addEventListener("change",render); });
+  /* Worldwide language picker — searchable dropdown built from LANG_META.
+     Every language listed has a full translation in I (original five in the
+     main table, the rest merged in from EXTRA_I above). */
+  var langSelectEl = document.getElementById("langSelect");
+  var langSearchEl = document.getElementById("langSearch");
+  var langHintEl = document.getElementById("langHint");
+  function langMeta(code){ for (var i=0;i<LANG_META.length;i++) if (LANG_META[i].code===code) return LANG_META[i]; return null; }
+  function buildLangOptions(filter){
+    var f = (filter||"").trim().toLowerCase();
+    var sorted = LANG_META.slice().sort(function(a,b){
+      if (a.code==="en") return -1; if (b.code==="en") return 1;
+      return a.name.localeCompare(b.name);
+    });
+    langSelectEl.innerHTML = "";
+    var shown = 0;
+    sorted.forEach(function(m){
+      if (f && (m.name+" "+m.native+" "+m.code).toLowerCase().indexOf(f)===-1) return;
+      var o = document.createElement("option");
+      o.value = m.code;
+      o.textContent = m.native + " — " + m.name;
+      if (m.code===lang) o.selected = true;
+      langSelectEl.appendChild(o); shown++;
+    });
+    if (!shown){
+      var o2 = document.createElement("option");
+      o2.value = ""; o2.textContent = "No language matches that search";
+      langSelectEl.appendChild(o2);
+    }
+    if (langHintEl) langHintEl.textContent = LANG_META.length + " languages from all over the world — Europe, Asia, Africa, the Americas, the Middle East and Oceania. Picking one changes the card, the printed labels, the PNG and the QR text.";
+  }
+  buildLangOptions("");
+  if (langSearchEl) langSearchEl.addEventListener("input", function(){ buildLangOptions(langSearchEl.value); });
+  if (langSelectEl) langSelectEl.addEventListener("change", function(){
+    if (!langSelectEl.value || !I[langSelectEl.value]) return;
+    lang = langSelectEl.value;
+    render();
+  });
+  /* design picker — swatches are built from the same palette table the PNG uses */
+  var captureAreaEl = document.getElementById("captureArea");
+  var designGridEl = document.getElementById("designGrid");
+  Object.keys(DESIGNS).forEach(function(key){
+    var d = DESIGNS[key];
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "design-btn";
+    b.setAttribute("data-design", key);
+    b.setAttribute("aria-pressed", key === design ? "true" : "false");
+    b.innerHTML = '<span class="sw" style="background:' + d.cardBg + '"><span class="sw-head" style="background:' + (d.layout === "stripe" ? d.accent : d.head) + '"></span><span class="sw-dot" style="background:' + d.accent + '"></span></span><span class="nm">' + d.name + '</span>';
+    b.addEventListener("click", function(){
+      design = key;
+      captureAreaEl.setAttribute("data-design", key);
+      document.getElementById("designName").textContent = d.name;
+      designGridEl.querySelectorAll(".design-btn").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    });
+    designGridEl.appendChild(b);
+  });
+  var statusEl = document.getElementById("statusMsg");
+  function wrapLines(ctx, text, maxW, maxLines){
+    var words=(text||"").split(/\s+/).filter(Boolean), lines=[], line="";
+    for(var i=0;i<words.length;i++){
+      var test=line ? line+" "+words[i] : words[i];
+      if(ctx.measureText(test).width>maxW && line){ lines.push(line); line=words[i]; if(lines.length>=maxLines) break; }
+      else line=test;
+    }
+    if(line && lines.length<maxLines) lines.push(line);
+    if(lines.length===maxLines && words.join(" ")!==lines.join(" ")) lines[maxLines-1]=lines[maxLines-1].replace(/…?$/,"")+"…";
+    return lines;
+  }
+  function drawCardPNG(){
+    var t=I[lang], W=1020, H=644, GAP=44, R=30;
+    var cv=document.createElement("canvas"); cv.width=W; cv.height=H*2+GAP;
+    var ctx=cv.getContext("2d");
+    ctx.fillStyle="#e9e9e4"; ctx.fillRect(0,0,cv.width,cv.height);
+    var MONO='"IBM Plex Mono",monospace', SANS='"IBM Plex Sans",sans-serif', ARCH='"Archivo",sans-serif';
+    var P=DESIGNS[design];
+    function rr(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+    function header(y, sub){
+      ctx.save(); rr(0,y,W,H,R); ctx.clip();
+      ctx.fillStyle=P.cardBg; ctx.fillRect(0,y,W,H);
+      var headInk = P.layout==="stripe" ? P.accent : P.headInk;
+      if(P.layout==="stripe"){ ctx.fillStyle=P.accent; ctx.fillRect(0,y+94,W,10); }
+      else { ctx.fillStyle=P.head; ctx.fillRect(0,y,W,104); }
+      ctx.fillStyle=P.plusBg; rr(26,y+24,56,56,10); ctx.fill();
+      ctx.fillStyle=P.plusInk; ctx.font='900 44px '+ARCH; ctx.textAlign="center"; ctx.fillText("+",54,y+68); ctx.textAlign="left";
+      ctx.fillStyle=headInk; ctx.font='900 40px '+ARCH; ctx.fillText(t.title.toUpperCase(),100,y+56);
+      ctx.font='500 19px '+MONO; ctx.fillText((sub||t.subtitle).toUpperCase(),100,y+86);
+      var bw=118; ctx.fillStyle=P.bloodBg; rr(W-bw-26,y+20,bw,64,10); ctx.fill();
+      ctx.fillStyle=P.bloodSub; ctx.font='600 14px '+MONO; ctx.textAlign="center"; ctx.fillText(t.blood.toUpperCase(),W-bw/2-26,y+42);
+      ctx.fillStyle=P.bloodInk; ctx.font='900 38px '+ARCH; ctx.fillText(val("fBlood")||"—",W-bw/2-26,y+78); ctx.textAlign="left";
+      ctx.restore();
+    }
+    function footLine(y, txt){ ctx.fillStyle=P.muted; ctx.font='500 16px '+MONO; wrapLines(ctx,txt,W-80,1).forEach(function(l){ ctx.fillText(l,40,y); }); }
+    function qrAt(x,y,size){ if(!lastQR) return; var tmp=document.createElement("canvas"); paintQR(tmp,lastQR,232); ctx.imageSmoothingEnabled=false; ctx.drawImage(tmp,x,y,size,size); ctx.strokeStyle="#e2e2d9"; ctx.strokeRect(x,y,size,size); ctx.imageSmoothingEnabled=true; }
+    function block(x,y,k,v,maxW,opts){
+      opts=opts||{}; ctx.fillStyle=P.accent; ctx.font='600 15px '+MONO; ctx.fillText(k.toUpperCase(),x,y);
+      ctx.fillStyle=P.ink; ctx.font=(opts.strong?'700 ':'400 ')+(opts.size||25)+'px '+SANS;
+      var lines=wrapLines(ctx,v||"—",maxW,opts.lines||2);
+      lines.forEach(function(l,i){ ctx.fillText(l,x,y+30+i*((opts.size||25)+7)); });
+      return y+30+lines.length*((opts.size||25)+7);
+    }
+    /* FRONT */
+    header(0);
+    ctx.fillStyle=P.ink; ctx.font='800 42px '+ARCH;
+    wrapLines(ctx,val("fName")||"Your name",640,1).forEach(function(l){ ctx.fillText(l,40,168); });
+    if(val("fDob")){ ctx.fillStyle=P.muted; ctx.font='500 19px '+MONO; ctx.fillText(t.dob+" · "+val("fDob"),40,198); }
+    ctx.fillStyle=P.allergyBg; rr(40,222,600,64,10); ctx.fill();
+    ctx.fillStyle=P.accent; ctx.font='600 15px '+MONO; ctx.fillText(t.allergies.toUpperCase(),56,246);
+    ctx.fillStyle=P.allergyInk; ctx.font='700 25px '+SANS; ctx.fillText(wrapLines(ctx,val("fAllergy")||"—",568,1)[0]||"—",56,276);
+    block(40,326,t.meds,val("fMeds"),600,{lines:2});
+    if(val("fCond")) block(40,442,t.conditions,val("fCond"),600,{lines:2});
+    qrAt(716,140,232);
+    ctx.fillStyle=P.muted; ctx.font='500 15px '+MONO; wrapLines(ctx,t.scan,232,2).forEach(function(l,i){ ctx.textAlign="center"; ctx.fillText(l,832,404+i*20); }); ctx.textAlign="left";
+    ctx.strokeStyle=P.foot; ctx.setLineDash([7,6]); ctx.beginPath(); ctx.moveTo(40,540); ctx.lineTo(W-40,540); ctx.stroke(); ctx.setLineDash([]);
+    [[40,"1"],[530,"2"]].forEach(function(pair){
+      var x=pair[0], n=pair[1];
+      ctx.fillStyle=P.muted; ctx.font='600 14px '+MONO; ctx.fillText((t.contact+" · "+(val("c"+n+"Rel")||"")).toUpperCase(),x,572);
+      ctx.fillStyle=P.ink; ctx.font='700 26px '+SANS; ctx.fillText(val("c"+n+"Name")||("Contact "+n),x,602);
+      ctx.fillStyle=P.accent; ctx.font='600 22px '+MONO; ctx.fillText(val("c"+n+"Phone"),x,630);
+    });
+    /* BACK */
+    var y2=H+GAP;
+    header(y2);
+    qrAt(40,y2+140,232);
+    ctx.fillStyle=P.muted; ctx.font='500 15px '+MONO; wrapLines(ctx,t.scan,232,2).forEach(function(l,i){ ctx.fillText(l,40,y2+396+i*20); });
+    var by=block(330,y2+168,t.note,val("fNote"),640,{size:24,lines:4});
+    block(330,Math.max(by+18,y2+400),t.callFirst,[val("c1Name"),val("c1Phone")].filter(Boolean).join(" · ")||"—",640,{strong:true,lines:2});
+    ctx.strokeStyle=P.foot; ctx.setLineDash([7,6]); ctx.beginPath(); ctx.moveTo(40,y2+540); ctx.lineTo(W-40,y2+540); ctx.stroke(); ctx.setLineDash([]);
+    footLine(y2+584, t.keep);
+    return cv;
+  }
+  document.getElementById("btnPng").addEventListener("click",function(){
+    try{
+      var cv=drawCardPNG();
+      var a=document.createElement("a");
+      a.download="emergency-card.png";
+      a.href=cv.toDataURL("image/png");
+      document.body.appendChild(a); a.click(); a.remove();
+      statusEl.textContent="Saved emergency-card.png (front on top, back below) — print each side at 85.6 × 54 mm, or keep the image on your phone.";
+    }catch(e){ statusEl.textContent="Could not make the image here — printing from the browser still works."; }
+  });
+  /* ---------- DETAILS VIEW (what a scan opens) ---------- */
+  function showDetails(parts){
+    var dl = I[parts[0]] ? parts[0] : "en";
+    var t = I[dl], d2 = D2[dl] || D2.en;
+    function g(i){ return (parts[i+1] || "").trim(); }
+    var name=g(0), dob=g(1), blood=g(2), whoFor=g(3), allergy=g(4), meds=g(5), cond=g(6),
+        c1n=g(7), c1r=g(8), c1p=g(9), c2n=g(10), c2r=g(11), c2p=g(12), note=g(13);
+    document.getElementById("dTitle").textContent = t.title;
+    document.getElementById("dSubtitle").textContent = whoFor || t.subtitle;
+    document.getElementById("dName").textContent = name || "—";
+    document.getElementById("dDob").textContent = dob ? (t.dob+" · "+dob) : "";
+    document.getElementById("dBloodLabel").textContent = t.blood;
+    document.getElementById("dBlood").textContent = blood || "—";
+    document.getElementById("dBloodBox").style.display = blood ? "" : "none";
+    document.getElementById("dAllergyLabel").textContent = t.allergies;
+    document.getElementById("dAllergy").textContent = allergy || "—";
+    document.getElementById("dMedsLabel").textContent = t.meds;
+    document.getElementById("dMedsBox").style.display = meds ? "" : "none";
+    document.getElementById("dMeds").textContent = meds;
+    document.getElementById("dCondLabel").textContent = t.conditions;
+    document.getElementById("dCondBox").style.display = cond ? "" : "none";
+    document.getElementById("dCond").textContent = cond;
+    document.getElementById("dNoteLabel").textContent = t.note;
+    document.getElementById("dNoteBox").style.display = note ? "" : "none";
+    document.getElementById("dNote").textContent = note;
+    document.getElementById("dContactsLabel").textContent = d2.contacts;
+    var html = "";
+    [[c1n,c1r,c1p],[c2n,c2r,c2p]].forEach(function(c){
+      if(!c[0] && !c[2]) return;
+      var tel = c[2].replace(/[^+\d]/g,"");
+      html += '<a class="d-call" href="tel:'+esc(tel)+'"><span class="who"><span class="n">'+esc(c[0]||"—")+'</span>'
+        + (c[1] ? '<span class="r"> · '+esc(c[1])+'</span>' : '')
+        + '<span class="p" style="display:block">'+esc(c[2])+'</span></span><span class="go">'+esc(d2.call)+'</span></a>';
+    });
+    document.getElementById("dContacts").innerHTML = html;
+    document.getElementById("dContactsBox").style.display = html ? "" : "none";
+    document.getElementById("btnMaker").textContent = d2.maker;
+    document.getElementById("dFoot").textContent = d2.foot;
+    document.body.classList.add("details-mode");
+    document.title = t.title + (name ? " — " + name : "");
+    window.scrollTo(0,0);
+  }
+  function route(){
+    var m = location.hash.match(/#d=([A-Za-z0-9\-_]+)/);
+    if(m){
+      try{
+        var parts = b64urlDecode(m[1]).split("\u001f");
+        if(parts.length >= 2){ showDetails(parts); return; }
+      }catch(e){}
+    }
+    document.body.classList.remove("details-mode");
+  }
+  window.addEventListener("hashchange", route);
+  document.getElementById("btnPreview").addEventListener("click", function(){
+    var box = document.getElementById("qrTextBox");
+    box.hidden = false;
+    box.scrollIntoView({behavior:"smooth", block:"nearest"});
+    var pre = document.getElementById("qrTextPreview");
+    pre.classList.remove("flash");
+    void pre.offsetWidth;
+    pre.classList.add("flash");
+    setTimeout(function(){ pre.classList.remove("flash"); }, 1600);
+  });
+  document.getElementById("btnMaker").addEventListener("click", function(){
+    if(history.pushState) history.pushState(null, "", location.href.split("#")[0]);
+    document.body.classList.remove("details-mode");
+    document.title = "Emergency Card — for anyone";
+    window.scrollTo(0,0);
+  });
+  render();
+  route();
+})();
+</script>
+</body>
+</html>
