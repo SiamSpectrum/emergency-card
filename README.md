@@ -4,7 +4,7 @@ A printable wallet card that carries the medical details a stranger would need i
 
 Fill in the form, print the card, put it in your wallet. Scan the QR code and the details are there as plain text — no app of ours, no account, no internet needed at scan time.
 
-Live version: https://siamspectrum.github.io/emergency-card/
+Live version: https://emergency-card-liard.vercel.app/
 
 ## What it is
 
